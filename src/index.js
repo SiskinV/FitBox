@@ -27,12 +27,12 @@ import "assets/demo/nucleo-icons-page-styles.css";
 // pages for this kit
 import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
-import LoginPage from "views/examples/LoginPage.js";
-import LandingPage from "views/examples/LandingPage.js";
-import ProfilePage from "views/examples/ProfilePage.js";
-import TrainingPage from "views/examples/TrainingPage";
-import NutrtionistPage from "views/examples/NutritionistPage ";
-import MassagePage from 'views/examples/MassagePage';
+import LoginPage from "views/pages/LoginPage.js";
+import LandingPage from "views/pages/LandingPage.js";
+import ProfilePage from "views/pages/ProfilePage.js";
+import TrainingPage from "views/pages/TrainingPage";
+import NutrtionistPage from "views/pages/NutritionistPage ";
+import MassagePage from 'views/pages/MassagePage';
 
 ReactDOM.render(
   <BrowserRouter>
