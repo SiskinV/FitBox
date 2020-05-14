@@ -132,7 +132,11 @@ function LandingPage() {
                       className="rounded-circle img-fluid img-raised"
                       src={require("assets/img/PersonalTrener3.jpg")}
                     ></img>
-                    <h4 className="title">Marija Peric</h4>
+                    <h4 className="title">
+                      <a className="link" href="http://localhost:3000/profile-page1">
+                        Marija Peric
+                      </a>
+                    </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
                       Sve je do terninga, niko ne ustane ujutru i istrci maraton{" "}
@@ -171,7 +175,11 @@ function LandingPage() {
                       className="rounded-circle img-fluid img-raised"
                       src={require("assets/img/PersonalTrener6.jpg")}
                     ></img>
-                    <h4 className="title">Nikola Dragovic</h4>
+                    <h4 className="title">
+                      <a href="http://localhost:3000/profile-page2" className="link">
+                        Nikola Dragovic
+                      </a>{" "}
+                      </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
                       Jedini los trening je onaj koji nisi uradio{" "}
@@ -201,7 +209,11 @@ function LandingPage() {
                       className="rounded-circle img-fluid img-raised"
                       src={require("assets/img/PersonalTrener2.jpg")}
                     ></img>
-                    <h4 className="title">Janko Pusic</h4>
+                    <h4 className="title">
+                      <a href="http://localhost:3000/profile-page3" className="link">
+                        Janko Pusic
+                      </a>{" "}
+                    </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
                       Treniranje ti ne menja samo telo. Treniranje ti menja i um i

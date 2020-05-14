@@ -134,7 +134,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  to='/profile-page'
+                  to='/profile-page1'
                   tag={Link}
                 >
                   <i className="now-ui-icons users_single-02 mr-1" />
