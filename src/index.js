@@ -35,6 +35,7 @@ import ProfilePage3 from 'views/pages/ProfilePage3.js';
 import TrainingPage from "views/pages/TrainingPage";
 import NutrtionistPage from "views/pages/NutritionistPage ";
 import MassagePage from 'views/pages/MassagePage';
+import MasNutriReservePage from 'views/pages/MasNutriReservePage';
 import SignupPage from "views/pages/SignUpPage";
 
 ReactDOM.render(
@@ -70,6 +71,10 @@ ReactDOM.render(
         <Route
           path="/massage-page"
           render={props => <MassagePage{...props} />}
+        />
+        <Route
+          path="/masnutrireserve-page"
+          render={props => <MasNutriReservePage{...props} />}
         />
         <Route
           path="/nutritionist-page"

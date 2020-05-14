@@ -293,6 +293,15 @@ function ProfilePage1() {
                                 </TabPane>
                             </TabContent>
                         </Row>
+                        <Row>
+                            <Col className="ml-auto mr-auto" md="12">
+                                <div className="title text-center">
+                                    <Button color="warning">
+                                        <a href="http://localhost:3000/masnutrireserve-page">Zakazi masazu </a>
+                                    </Button>
+                                </div>
+                            </Col>
+                        </Row>
                     </Container>
                 </div>
                 <DefaultFooter />
