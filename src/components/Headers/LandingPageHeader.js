@@ -27,38 +27,19 @@ function LandingPageHeader() {
         <div
           className="page-header-image"
           style={{
-            backgroundImage: "url(" + require("assets/img/bg6.jpg") + ")"
+            backgroundImage: "url(" + require("assets/img/landingPageTeretana4.jpg") + ")"
           }}
           ref={pageHeader}
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">This is our great company.</h1>
-            <div className="text-center">
-              <Button
-                className="btn-icon btn-round"
-                color="info"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
-              >
-                <i className="fab fa-facebook-square"></i>
-              </Button>
-              <Button
-                className="btn-icon btn-round"
-                color="info"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
-              >
-                <i className="fab fa-twitter"></i>
-              </Button>
-              <Button
-                className="btn-icon btn-round"
-                color="info"
-                href="#pablo"
-                onClick={e => e.preventDefault()}
-              >
-                <i className="fab fa-google-plus"></i>
-              </Button>
+            <h1 className="title">Welcome to FitBox.</h1>
+            <div>
+              <blockquote className="blockqoute">
+                <p> Radno vreme : </p>
+                <p> Pon-Pet: 00-24h </p>
+                <p> Sub-Ned: 8-21h</p>
+              </blockquote>
             </div>
           </Container>
         </div>

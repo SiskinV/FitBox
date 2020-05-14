@@ -60,7 +60,7 @@ function IndexNavbar() {
               onClick={e => e.preventDefault()}
             >
               <i className="now-ui-icons sport_user-run mr1"></i>
-              {"  "}<p>FitGym</p>
+              {"  "}<p>FitBox</p>
             </NavbarBrand>
             <button
               className="navbar-toggler navbar-toggler"
@@ -88,7 +88,7 @@ function IndexNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons objects_globe"></i>
-                  <p>Landing-Page</p>
+                  <p>Pocetna</p>
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav>
@@ -138,7 +138,7 @@ function IndexNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons users_single-02 mr-1" />
-                  <p>Profile-Page</p>
+                  <p>Profil</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -147,7 +147,7 @@ function IndexNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons business_badge mr-1" />
-                  <p>Login</p>
+                  <p>Uloguj se</p>
                 </NavLink>
               </NavItem>
               <NavItem>
