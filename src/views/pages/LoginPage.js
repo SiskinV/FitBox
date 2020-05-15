@@ -21,7 +21,7 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 
-function LoginPage() {
+const LoginPage = () => {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   React.useEffect(() => {
@@ -67,6 +67,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
+                        id="username"
                         placeholder="Username..."
                         type="text"
                         onFocus={() => setFirstFocus(true)}
@@ -106,9 +107,7 @@ function LoginPage() {
                     <div className="pull-left">
                       <h6>
                         <a
-
                           href="http://localhost:3000/signup-page"
-
                         >
                           Registruj se
                         </a>
@@ -124,6 +123,9 @@ function LoginPage() {
                           Help?
                         </a>
                       </h6>
+                      <Button onClick={() => { alert(document.getElementById("username").value) }}>
+                        klikni me
+                      </Button>
                     </div>
                   </CardFooter>
                 </Form>
