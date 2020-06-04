@@ -13,7 +13,6 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
@@ -61,7 +60,7 @@ function LandingPage() {
                     <p className="blockquote blockquote-info">
                       "I have nothing in common with lazy people who blame
                       others for their lack of success. Great things come form hard work
-                      abd perseverance. No excuses
+                      abd perseverance. No excuses.
                       " <br></br>
                       <br></br>
                       <small>-Kobe Bryant</small>
@@ -112,7 +111,7 @@ function LandingPage() {
                   </p>
                   <p>
                     Oporavak posle napornih treninga?
-                    Nikad laksi uz nase masaze
+                    Nikad laksi uz nase masaze.
                   </p>
 
                 </Col>
@@ -182,7 +181,7 @@ function LandingPage() {
                       </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
-                      Jedini los trening je onaj koji nisi uradio{" "}
+                      Jedini los trening je onaj koji nisi uradio{" "}.
                     </p>
                     <Button
                       className="btn-icon btn-round"
@@ -218,7 +217,7 @@ function LandingPage() {
                     <p className="description">
                       Treniranje ti ne menja samo telo. Treniranje ti menja i um i
                       stav i raspolozenje.{" "}
-                      Najlepsi pogled dolazi nakon najtezeg penjanja
+                      Najlepsi pogled dolazi nakon najtezeg penjanja.
                      
                     </p>
                     <Button
