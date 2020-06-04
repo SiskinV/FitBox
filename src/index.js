@@ -29,10 +29,14 @@ import Index from "views/Index.js";
 import NucleoIcons from "views/NucleoIcons.js";
 import LoginPage from "views/pages/LoginPage.js";
 import LandingPage from "views/pages/LandingPage.js";
-import ProfilePage from "views/pages/ProfilePage.js";
+import ProfilePage1 from "views/pages/ProfilePage1.js";
+import ProfilePage2 from 'views/pages/ProfilePage2.js';
+import ProfilePage3 from 'views/pages/ProfilePage3.js';
 import TrainingPage from "views/pages/TrainingPage";
 import NutrtionistPage from "views/pages/NutritionistPage ";
 import MassagePage from 'views/pages/MassagePage';
+import MasNutriReservePage from 'views/pages/MasNutriReservePage';
+import SignupPage from "views/pages/SignUpPage";
 
 ReactDOM.render(
   <BrowserRouter>
@@ -43,8 +47,16 @@ ReactDOM.render(
           render={props => <LandingPage {...props} />}
         />
         <Route
-          path="/profile-page"
-          render={props => <ProfilePage {...props} />}
+          path="/profile-page1"
+          render={props => <ProfilePage1 {...props} />}
+        />
+        <Route
+          path="/profile-page2"
+          render={props => <ProfilePage2 {...props} />}
+        />
+        <Route
+          path="/profile-page3"
+          render={props => <ProfilePage3 {...props} />}
         />
         <Route path="/login-page" render={props => <LoginPage {...props} />} />
         <Route path="/index" render={props => <Index {...props} />} />
@@ -61,8 +73,16 @@ ReactDOM.render(
           render={props => <MassagePage{...props} />}
         />
         <Route
+          path="/masnutrireserve-page"
+          render={props => <MasNutriReservePage{...props} />}
+        />
+        <Route
           path="/nutritionist-page"
           render={props => <NutrtionistPage{...props} />}
+        />
+        <Route
+          path="/signup-page"
+          render={props => <SignupPage{...props} />}
         />
         <Redirect to="/landing-page" />
         <Redirect from="/" to="/ladning-page" />

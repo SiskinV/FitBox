@@ -13,7 +13,6 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
@@ -61,7 +60,7 @@ function LandingPage() {
                     <p className="blockquote blockquote-info">
                       "I have nothing in common with lazy people who blame
                       others for their lack of success. Great things come form hard work
-                      abd perseverance. No excuses
+                      abd perseverance. No excuses.
                       " <br></br>
                       <br></br>
                       <small>-Kobe Bryant</small>
@@ -112,7 +111,7 @@ function LandingPage() {
                   </p>
                   <p>
                     Oporavak posle napornih treninga?
-                    Nikad laksi uz nase masaze
+                    Nikad laksi uz nase masaze.
                   </p>
 
                 </Col>
@@ -132,7 +131,11 @@ function LandingPage() {
                       className="rounded-circle img-fluid img-raised"
                       src={require("assets/img/PersonalTrener3.jpg")}
                     ></img>
-                    <h4 className="title">Marija Peric</h4>
+                    <h4 className="title">
+                      <a className="link" href="http://localhost:3000/profile-page1">
+                        Marija Peric
+                      </a>
+                    </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
                       Sve je do terninga, niko ne ustane ujutru i istrci maraton{" "}
@@ -171,10 +174,14 @@ function LandingPage() {
                       className="rounded-circle img-fluid img-raised"
                       src={require("assets/img/PersonalTrener6.jpg")}
                     ></img>
-                    <h4 className="title">Nikola Dragovic</h4>
+                    <h4 className="title">
+                      <a href="http://localhost:3000/profile-page2" className="link">
+                        Nikola Dragovic
+                      </a>{" "}
+                      </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
-                      Jedini los trening je onaj koji nisi uradio{" "}
+                      Jedini los trening je onaj koji nisi uradio{" "}.
                     </p>
                     <Button
                       className="btn-icon btn-round"
@@ -201,12 +208,16 @@ function LandingPage() {
                       className="rounded-circle img-fluid img-raised"
                       src={require("assets/img/PersonalTrener2.jpg")}
                     ></img>
-                    <h4 className="title">Janko Pusic</h4>
+                    <h4 className="title">
+                      <a href="http://localhost:3000/profile-page3" className="link">
+                        Janko Pusic
+                      </a>{" "}
+                    </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
                       Treniranje ti ne menja samo telo. Treniranje ti menja i um i
                       stav i raspolozenje.{" "}
-                      Najlepsi pogled dolazi nakon najtezeg penjanja
+                      Najlepsi pogled dolazi nakon najtezeg penjanja.
                      
                     </p>
                     <Button

@@ -21,7 +21,7 @@ import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 
-function LoginPage() {
+const LoginPage = () => {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
   React.useEffect(() => {
@@ -52,10 +52,6 @@ function LoginPage() {
                 <Form action="" className="form" method="">
                   <CardHeader className="text-center">
                     <div className="logo-container">
-                      <img
-                        alt="..."
-                        src={require("assets/img/now-logo.png")}
-                      ></img>
                     </div>
                   </CardHeader>
                   <CardBody>
@@ -71,7 +67,8 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="First Name..."
+                        id="username"
+                        placeholder="Username..."
                         type="text"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
@@ -89,7 +86,7 @@ function LoginPage() {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
-                        placeholder="Last Name..."
+                        placeholder="Password..."
                         type="text"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
@@ -105,29 +102,30 @@ function LoginPage() {
                       onClick={e => e.preventDefault()}
                       size="lg"
                     >
-                      Get Started
+                      Uloguj se
                     </Button>
                     <div className="pull-left">
                       <h6>
                         <a
-                          className="link"
-                          href="#pablo"
-                          onClick={e => e.preventDefault()}
+                          href="http://localhost:3000/signup-page"
                         >
-                          Create Account
+                          Registruj se
                         </a>
                       </h6>
                     </div>
                     <div className="pull-right">
                       <h6>
                         <a
-                          className="link"
+
                           href="#pablo"
                           onClick={e => e.preventDefault()}
                         >
-                          Need Help?
+                          Help?
                         </a>
                       </h6>
+                      <Button onClick={() => { alert(document.getElementById("username").value) }}>
+                        klikni me
+                      </Button>
                     </div>
                   </CardFooter>
                 </Form>

@@ -17,10 +17,10 @@ import {
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
+import ProfilePageHeader1 from "components/Headers/ProfilePageHeader1.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 
-function ProfilePage() {
+function ProfilePage1() {
   const [pills, setPills] = React.useState("2");
   React.useEffect(() => {
     document.body.classList.add("profile-page");
@@ -35,7 +35,7 @@ function ProfilePage() {
     <>
       <IndexNavbar />
       <div className="wrapper">
-        <ProfilePageHeader />
+        <ProfilePageHeader1 />
         <div className="section">
           <Container>
             <div className="button-container">
@@ -65,7 +65,7 @@ function ProfilePage() {
                 Follow me on Instagram
               </UncontrolledTooltip>
             </div>
-            <h3 className="title">About me</h3>
+            <h3 className="title">O meni</h3>
             <h5 className="description">
               An artist of considerable range, Ryan — the name taken by
               Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs
@@ -221,4 +221,4 @@ function ProfilePage() {
   );
 }
 
-export default ProfilePage;
+export default ProfilePage1;
