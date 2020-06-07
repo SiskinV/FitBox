@@ -1,4 +1,4 @@
-import React,{ useState } from 'react';
+import React from 'react';
 // reactstrap components
 import {
     Button,
@@ -24,20 +24,11 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import ProfilePageHeader1 from "components/Headers/ProfilePageHeader1.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import TrainingPageHeader from "components/Headers/TrainingPageHeader";
-let cntId=0;
-let plus=[4,5,7,0,2,1,4,5,7,6];
-let minus=[2,1,7,3,2,5,1,2,1,3];
-const pplus =(e,id)=>{
-plus[id]+=1;
-console.log(plus);
-}
-const mminus = (e,id)=>{
-minus[id]+=1;
-console.log(minus);
-}
+const klik =(event)=>{
+    event.preventDefault();
+    console.log("budala");
+    }
 const TrainingPage = () => {
-    
-    const [buttonText, setButtonText] = React.useState(plus[cntId]);
     
     const [pills, setPills] = React.useState("2");
     React.useEffect(() => {
@@ -108,7 +99,7 @@ const TrainingPage = () => {
                                                     setPills("1");
                                                 }}
                                             >
-                                                <i>1</i>
+                                                <i>Pon</i>
                                             </NavLink>
                                         </NavItem>
                                         <NavItem>
@@ -120,7 +111,7 @@ const TrainingPage = () => {
                                                     setPills("2");
                                                 }}
                                             >
-                                                <i>2</i>
+                                                <i>Sre</i>
                                             </NavLink>
                                         </NavItem>
                                         <NavItem>
@@ -132,7 +123,7 @@ const TrainingPage = () => {
                                                     setPills("3");
                                                 }}
                                             >
-                                                <i>3</i>
+                                                <i>Pet</i>
                                             </NavLink>
                                         </NavItem>
                                     </Nav>
@@ -152,10 +143,9 @@ const TrainingPage = () => {
                                                         Program Prenatal yoge je takav da se prilagođava trimestru u kome se trenutno nalazite, tako da ćete uvek vežbati bezbedno i u granicama svog trenutnog stanja i mogućnosti. Program se sastoji od brojnih fizičkih vežbi i asana, sadrži vežbe disanja za trudnice, kao i opuštanje – yoga Nidra!
                                                         Tokom trudnoće naše telo se stalno menja!
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,0);setButtonText(plus[0])}}>+{buttonText}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,0);setButtonText(minus[0])}}>-{buttonText}</Button>
-                                                       
+                                                        <Button  color="warning" onClick={e=>klik(e)}>
+                                                            <a href="http://localhost:3000/zakazi-page">Zakazi trening </a>
+                                                        </Button>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
@@ -165,9 +155,6 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         Kreiran radi sagorevanja masti i značajnog uvećanja atletskih sposobnosti, ova tridesetominutna tim trening sesija ne koristi nikakvu opremu osim samog tela. Trening vode obučeni treneri, i obezbeđuje izazov i intenzitet koji su vam neophodni da biste sopstveni trening preneli na viši nivo i zaista ostvarili rezultate.
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,1);setButtonText(plus[1])}}>+{buttonText}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,1);setButtonText(minus[1])}}>-{buttonText}</Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -277,16 +264,6 @@ const TrainingPage = () => {
                                     </Col>
                                 </TabPane>
                             </TabContent>
-                        </Row>
-                        <Row>
-                            <Col className="ml-auto mr-auto" md="12">
-                                <div className="title text-center">
-                                    <Button  color="warning">
-                                        <a href="http://localhost:3000/zakazi-page">Zakazi trening </a>
-                                        {/* href="http://localhost:3000/masnutrireserve-page" */}
-                                    </Button>
-                                </div>
-                            </Col>
                         </Row>
                     </Container>
                 </div>

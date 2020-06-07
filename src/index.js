@@ -33,6 +33,7 @@ import ProfilePage1 from "views/pages/ProfilePage1.js";
 import ProfilePage2 from 'views/pages/ProfilePage2.js';
 import ProfilePage3 from 'views/pages/ProfilePage3.js';
 import TrainingPage from "views/pages/TrainingPage";
+import ZakazivanjeTreninga from "views/pages/ZakazivanjeTreninga.js"
 import NutrtionistPage from "views/pages/NutritionistPage ";
 import MassagePage from 'views/pages/MassagePage';
 import MasNutriReservePage from 'views/pages/MasNutriReservePage';
@@ -83,6 +84,10 @@ ReactDOM.render(
         <Route
           path="/signup-page"
           render={props => <SignupPage{...props} />}
+        />
+        <Route
+          path="/zakazi-page"
+          render={props => <ZakazivanjeTreninga{...props} />}
         />
         <Redirect to="/landing-page" />
         <Redirect from="/" to="/ladning-page" />
