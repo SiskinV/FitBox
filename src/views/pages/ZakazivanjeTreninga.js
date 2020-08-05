@@ -143,9 +143,7 @@ const TrainingPage = () => {
                                                         Program Prenatal yoge je takav da se prilagođava trimestru u kome se trenutno nalazite, tako da ćete uvek vežbati bezbedno i u granicama svog trenutnog stanja i mogućnosti. Program se sastoji od brojnih fizičkih vežbi i asana, sadrži vežbe disanja za trudnice, kao i opuštanje – yoga Nidra!
                                                         Tokom trudnoće naše telo se stalno menja!
                                                         </CardText>
-                                                        <Button  color="warning" onClick={e=>klik(e)}>
-                                                            <a href="http://localhost:3000/zakazi-page">Zakazi trening </a>
-                                                        </Button>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
@@ -155,6 +153,7 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         Kreiran radi sagorevanja masti i značajnog uvećanja atletskih sposobnosti, ova tridesetominutna tim trening sesija ne koristi nikakvu opremu osim samog tela. Trening vode obučeni treneri, i obezbeđuje izazov i intenzitet koji su vam neophodni da biste sopstveni trening preneli na viši nivo i zaista ostvarili rezultate.
                                                         </CardText>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -166,6 +165,7 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         Gluteus je trening na kom se efikasno oblikuju zadnjica i noge. Za samo mesec dana mogu se videti merljivi rezultati promena na oblinama i vašoj zadnjici.
                                                         </CardText>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
@@ -177,6 +177,7 @@ const TrainingPage = () => {
                                                         Postoji razlog za to, osim što će te se dobro prezonijiti izgbućete
                                                         preko 500 kalorija.
                                                         </CardText>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -194,6 +195,7 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         Tradicija vežbanja više hiljada godina, obuhvata fizičke vežbe i vežbe disanja u cilju poboljšanja kompletnog energetskog stanja čoveka. Praktična disciplina koja povezuje um, telo i duh na potpuno prirodan način. Vežbe deluju na najvažnije centre u telu podižući fizičko i mentalno zdravlje na viši nivo. Razvija se fizička snaga, povećava izdržljivost i fleksibilnost, ublažava umor i stres, a sa druge strane diže nivo energije u organizmu pa samim tim poboljšava celokupno zdravsveno stanje. Nema ograničenja, preporučuje se svima!
                                                         </CardText>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
@@ -204,6 +206,7 @@ const TrainingPage = () => {
                                                         Pilates je zamišljen da bude kompletna disciplina fizičkog vežbanja.
                                                         Mada, možda će se početnicima činiti da on ne zadovoljava u dovoljnoj meri kardio-vaskularni trening. Ipak, jednom kada se u njemu usavršite, Pilates trening ojačaće i preoblikovati (izravnati) celo vaše telo. Pilates naširoko izbegava jake udarce, veliku izlaznu snagu i teška mišićna i skeletna opterećenja. Naglasak nije jednostavno na sticanju mišićne mase. Njegov fokus je jedinstven i stavlja naglasak na izduživanje i poravnjanje, i on može u tome veoma uspešno da uvežba mišiće predupređujući time razne povrede.
                                                         </CardText>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -215,6 +218,7 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         Osnovana je 2001. godine. Zumba Fitnes je svetski brend koji spaja fitnes, zabavu i kulturu u uzbudljivi “dance” koncept! Zumba® treninzi u Beogradu u Ethnogymu na Banjici  su kao fitnes žurka koja sadrži latino muziku, latino plesove i koreografiju koja se lako prati. Dok se zabavljate na treningu ovaj aerobni program će vam pokrenuti celo telo, dobro će vas oznojiti i uneti osvežavajuću energiju dalekih južnih mora. Zumba utapa jednostavne plesne poktere u hipnotičke ritmove salse, sambe, tanga…
                                                         </CardText>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
@@ -227,6 +231,7 @@ const TrainingPage = () => {
                                                         E-Core je ekspres program baziran na miksu jednostavnih i sigurnih vežbi.
                                                         Sa E- Core-om uživaćete u izazovu i uspehu vežbi koje će vas dovesti do željenih trbušnjaka
                                                         </CardText>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -244,6 +249,7 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         BODYSTEP™ je energični trening sa steperom koji čini da se osećate slobodnim tokom treninga.  Ako saberemo podesive stepere, jednostavne korake (preko ili oko stepera) sa sjajnom muzikom koju svi pevaju i dostpunim instruktorom, koga ćete lako pratiti, imaćete sjajan trening. Kardio blokovi će probuditi vaš sistem za sagorevanje kalorija i ubaciti ga u sledeću brzinu, sve to praćeno kondicionim pesmama koje će oblikovati vaše telo.
                                                         </CardText>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
 
@@ -256,6 +262,7 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         BODY COMBAT™ je grupni fitnes kadrio trening u kome ste svaki put vi pobednici. Jedini trening na kome možete totalno da oslobodite sve negativno iz sebe i da se nakon toga osećate sjajno. Ovaj energični program je inspirisan mešavinom borilačkih veština i koriste se pokreti iz raznih disciplina kao što su: karate, boks, tai chi i muay thai. Iskustvo koje vežbači dobijaju na treningu slušajući sjajnu motivacionu muziku i prateći savršene instruktore čini to da vežbači požele da nikad ne izađu iz ringa (fitnes sale). Baš to je ono što BODYCOMBAT™ čini svetski najpopularnijim   borilačkim fitnes treningom. Tokom ovog krajnje ratničkog treninga vi ćete udarati, napadati, šutirati i izvoditi katu i tim putem sagoriti mnogo kalorija. Kao i svi LES MILLS™ programi, na svaka tri meseca BODYCOMBAT™ dobija novu muziku i koreografiju koju dizajniraju najbolji Master treneri i MMA experti.
                                                         </CardText>
+                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
 

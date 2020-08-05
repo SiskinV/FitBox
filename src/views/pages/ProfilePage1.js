@@ -21,6 +21,7 @@ import ProfilePageHeader1 from "components/Headers/ProfilePageHeader1.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 
 function ProfilePage1() {
+  
   const [pills, setPills] = React.useState("2");
   React.useEffect(() => {
     document.body.classList.add("profile-page");

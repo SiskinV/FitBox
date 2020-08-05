@@ -38,7 +38,7 @@ class Login extends React.Component {
       username: this.props.values.username,
       password: this.props.values.password,
     };  
-    localStorage.setItem('dataToSend', dataToSend);
+    localStorage.setItem('dataToSend',JSON.stringify(dataToSend));
 
 
   };
