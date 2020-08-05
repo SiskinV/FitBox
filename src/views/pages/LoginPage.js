@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Redirect } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 // reactstrap components
 import {
   Button,
@@ -20,7 +21,33 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
+let userN='';
+let pass='';
+// const updateInputValue=(e)=>{
+//   e.preventDefault();
+//   userN=e.target.value;
+// }
+const updateInputValue=(e)=>{
+  userN=e.target.value;
 
+}
+const updateInputValueP=(e)=>{
+  pass=e.target.value;
+}
+// const updateInputValue = input => e => {
+//    [input]= e.target.value ;
+// };
+const ulogujSe=(event)=>{
+  
+  event.preventDefault();
+  console.log("dugmestisnuo "+userN+' '+pass );
+  localStorage.setItem('username',userN);
+  localStorage.setItem('password',pass);
+  userN ='';
+  pass='';
+  // {return(<Redirect to="http://localhost:3000/landing-page" />)}
+  // {return(<Redirect to='/landing-page' />);};
+}
 const LoginPage = () => {
   const [firstFocus, setFirstFocus] = React.useState(false);
   const [lastFocus, setLastFocus] = React.useState(false);
@@ -72,6 +99,8 @@ const LoginPage = () => {
                         type="text"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
+                       // value={userN}
+                        onChange={e=>updateInputValue(e)}
                       ></Input>
                     </InputGroup>
                     <InputGroup
@@ -87,9 +116,10 @@ const LoginPage = () => {
                       </InputGroupAddon>
                       <Input
                         placeholder="Password..."
-                        type="text"
+                        type="password"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
+                        onChange={e=>updateInputValueP(e)}
                       ></Input>
                     </InputGroup>
                   </CardBody>
@@ -99,10 +129,13 @@ const LoginPage = () => {
                       className="btn-round"
                       color="info"
                       href="#pablo"
-                      onClick={e => e.preventDefault()}
+                      onClick={e => ulogujSe(e)}
                       size="lg"
+                      
                     >
-                      Uloguj se
+                      <Link to="http://localhost:3000/landing-page">Uloguj se</Link>
+                      
+                    
                     </Button>
                     <div className="pull-left">
                       <h6>
