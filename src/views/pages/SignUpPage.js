@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from 'react-router-dom'
 // reactstrap components
 import {
     Button,
@@ -20,6 +20,77 @@ import {
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
 
+const reset = () => {
+    document.getElementById('name').value = "";
+    document.getElementById('surname').value = "";
+    document.getElementById('username').value = "";
+    document.getElementById('email').value = "";
+    document.getElementById('password').value = "";
+}
+
+const registrujSe = (event) => {
+
+    event.preventDefault();
+
+    var users = JSON.parse(localStorage.getItem('users'));
+    if (users == null) {
+        users = [];
+    }
+
+    var moze = 1;
+
+    if (users != null) {
+        console.log('usao u if');
+        for (var i = 0; i < users.length; i++) {
+            console.log(users[i]);
+            if (users[i].username == document.getElementById('username').value) {
+                moze = 0;
+                alert('User already exists');
+                reset();
+            }
+        }
+    }
+
+    if (moze == 1) {
+        var user = {
+            name: document.getElementById('name').value,
+            surname: document.getElementById('surname').value,
+            username: document.getElementById('username').value,
+            email: document.getElementById('email').value,
+            password: document.getElementById('password').value,
+            trainings: [{
+                name: String,
+                done: String,
+                comments: {
+                    number: String,
+                    desc: String,
+                },
+            }]
+        };
+
+        users.push(user);
+        localStorage.setItem('users', JSON.stringify(users));
+        alert("Uspesno ste se registrovali");
+
+        var ulogovan = JSON.parse(localStorage.getItem('ulogovan'));
+        if (ulogovan == null) {
+            ulogovan = {
+                username: document.getElementById('username').value,
+                password: document.getElementById('password').value
+            };
+        } else {
+            ulogovan.username = document.getElementById('username').value;
+            ulogovan.password = document.getElementById('password').value;
+        }
+
+        localStorage.setItem('ulogovan', JSON.stringify(ulogovan));
+        localStorage.setItem('ulogovanUser', 1);
+
+        window.location.replace("http://localhost:3000/landing-page");
+    }
+
+}
+
 function SignupPage() {
     const [firstFocus, setFirstFocus] = React.useState(false);
     const [lastFocus, setLastFocus] = React.useState(false);
@@ -34,6 +105,9 @@ function SignupPage() {
             document.body.classList.remove("sidebar-collapse");
         };
     });
+
+
+
     return (
         <>
             <IndexNavbar />
@@ -66,6 +140,7 @@ function SignupPage() {
                                                 </InputGroupText>
                                             </InputGroupAddon>
                                             <Input
+                                                id="name"
                                                 placeholder="Ime..."
                                                 type="text"
                                                 onFocus={() => setFirstFocus(true)}
@@ -84,6 +159,7 @@ function SignupPage() {
                                                 </InputGroupText>
                                             </InputGroupAddon>
                                             <Input
+                                                id="surname"
                                                 placeholder="Prezime..."
                                                 type="text"
                                                 onFocus={() => setLastFocus(true)}
@@ -102,6 +178,7 @@ function SignupPage() {
                                                 </InputGroupText>
                                             </InputGroupAddon>
                                             <Input
+                                                id="username"
                                                 placeholder="Username..."
                                                 type="text"
                                                 onFocus={() => setLastFocus(true)}
@@ -120,6 +197,7 @@ function SignupPage() {
                                                 </InputGroupText>
                                             </InputGroupAddon>
                                             <Input
+                                                id="email"
                                                 placeholder="Email..."
                                                 type="text"
                                                 onFocus={() => setLastFocus(true)}
@@ -138,8 +216,9 @@ function SignupPage() {
                                                 </InputGroupText>
                                             </InputGroupAddon>
                                             <Input
+                                                id="password"
                                                 placeholder="Password..."
-                                                type="text"
+                                                type="password"
                                                 onFocus={() => setLastFocus(true)}
                                                 onBlur={() => setLastFocus(false)}
                                             ></Input>
@@ -151,11 +230,11 @@ function SignupPage() {
                                             className="btn-round"
                                             color="info"
                                             href="#pablo"
-                                            onClick={e => e.preventDefault()}
+                                            onClick={e => registrujSe(e)}
                                             size="lg"
                                         >
-                                            Registru se
-                    </Button>
+                                            Registruj se
+                                        </Button>
 
                                     </CardFooter>
                                 </Form>

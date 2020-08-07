@@ -1,6 +1,6 @@
 import React from "react";
 import { Redirect } from 'react-router-dom'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // reactstrap components
 import {
   Button,
@@ -21,30 +21,75 @@ import {
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
 import TransparentFooter from "components/Footers/TransparentFooter.js";
 import IndexNavbar from "components/Navbars/IndexNavbar";
-let userN='';
-let pass='';
+
 // const updateInputValue=(e)=>{
 //   e.preventDefault();
 //   userN=e.target.value;
 // }
-const updateInputValue=(e)=>{
-  userN=e.target.value;
+
+//NEPOTREBNO 
+/*
+const updateInputValue = (e) => {
+  userN = e.target.value;
 
 }
-const updateInputValueP=(e)=>{
-  pass=e.target.value;
+const updateInputValueP = (e) => {
+  pass = e.target.value;
 }
+*/
 // const updateInputValue = input => e => {
 //    [input]= e.target.value ;
 // };
-const ulogujSe=(event)=>{
-  
+const ulogujSe = (event) => {
+
   event.preventDefault();
-  console.log("dugmestisnuo "+userN+' '+pass );
-  localStorage.setItem('username',userN);
-  localStorage.setItem('password',pass);
-  userN ='';
-  pass='';
+  //console.log("dugmestisnuo " + userN + ' ' + pass);
+
+  var users = [];
+  users = JSON.parse(localStorage.getItem('users'));
+
+  var name = document.getElementById("username").value;
+  var pass = document.getElementById("password").value
+  var uspesanLog = 0;
+
+  for (var i = 0; i < users.length; i++) {
+    if (users[i].username == name) {
+      if (users[i].password == pass) {
+        uspesanLog = 1;
+      }
+    }
+  }
+
+  if (uspesanLog) {
+    var ulogovan = JSON.parse(localStorage.getItem('ulogovan'));
+    if (ulogovan == null) {
+      ulogovan = {
+        username: document.getElementById("username").value,
+        password: document.getElementById("password").value
+      };
+    } else {
+      ulogovan.username = document.getElementById('username').value;
+      ulogovan.password = document.getElementById('password').value;
+    }
+
+    localStorage.setItem('ulogovan', JSON.stringify(ulogovan));
+    alert("Uspesno ulogovan user");
+    localStorage.setItem('ulogovanUser', 1);
+    window.location.replace("http://localhost:3000/landing-page");
+  } else {
+    alert('Wrong username or password, please try again');
+    //Window.location = "http://localhost:3000/login-page";
+    document.getElementById('username').value = "";
+    document.getElementById('password').value = "";
+  }
+
+
+
+  //localStorage.setItem('username', document.getElementById("username").value);
+  //localStorage.setItem('password', document.getElementById("password").value);
+
+  // userN = '';
+  // pass = '';
   // {return(<Redirect to="http://localhost:3000/landing-page" />)}
   // {return(<Redirect to='/landing-page' />);};
 }
@@ -99,8 +144,7 @@ const LoginPage = () => {
                         type="text"
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
-                       // value={userN}
-                        onChange={e=>updateInputValue(e)}
+                        onChange={e => e.preventDefault()}
                       ></Input>
                     </InputGroup>
                     <InputGroup
@@ -115,11 +159,12 @@ const LoginPage = () => {
                         </InputGroupText>
                       </InputGroupAddon>
                       <Input
+                        id='password'
                         placeholder="Password..."
                         type="password"
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
-                        onChange={e=>updateInputValueP(e)}
+                        onChange={e => e.preventDefault()}
                       ></Input>
                     </InputGroup>
                   </CardBody>
@@ -131,11 +176,11 @@ const LoginPage = () => {
                       href="#pablo"
                       onClick={e => ulogujSe(e)}
                       size="lg"
-                      
+
                     >
-                      <Link to="http://localhost:3000/landing-page">Uloguj se</Link>
-                      
-                    
+                      Uloguj se
+
+
                     </Button>
                     <div className="pull-left">
                       <h6>
