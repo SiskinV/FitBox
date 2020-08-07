@@ -14,7 +14,8 @@
     "react-router": "5.0.1",
     "react-router-dom": "5.0.1",
     "react-scripts": "3.0.1",
-    "reactstrap": "8.0.1"
+    "reactstrap": "8.0.1",
+    "typescript": "3.5.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -43,5 +44,9 @@
   },
   "optionalDependencies": {
     "typescript": "3.5.3"
-  }
+  },
+  "description": "![Now UI Kit React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/now-ui-kit-react/opt_nuk_react_thumbnail.jpg)",
+  "main": "index.js",
+  "author": "",
+  "license": "ISC"
 }
