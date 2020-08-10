@@ -24,9 +24,22 @@ import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import ProfilePageHeader1 from "components/Headers/ProfilePageHeader1.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
 import TrainingPageHeader from "components/Headers/TrainingPageHeader";
+var opis;
 const klik =(event)=>{
     event.preventDefault();
-    console.log("budala");
+    console.log(opis);
+    var logovan;
+    var korisnik=JSON.parse(localStorage.getItem('ulogovan'));
+    var korisnici=JSON.parse(localStorage.getItem('users'));
+    for (var i = 0; i < korisnici.length; i++) {
+        if (korisnici[i].username == korisnik.username) {
+           korisnici[i].trainings.name=opis;
+           localStorage.setItem('users', JSON.stringify(korisnici));
+           console.log(korisnici);
+           break;
+        }
+      }
+
     }
 const TrainingPage = () => {
     
@@ -153,7 +166,7 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         Kreiran radi sagorevanja masti i značajnog uvećanja atletskih sposobnosti, ova tridesetominutna tim trening sesija ne koristi nikakvu opremu osim samog tela. Trening vode obučeni treneri, i obezbeđuje izazov i intenzitet koji su vam neophodni da biste sopstveni trening preneli na viši nivo i zaista ostvarili rezultate.
                                                         </CardText>
-                                                        <Button  color="warning" onClick={e=>klik(e)}>Zakazi trening </Button>
+                                                        <Button  color="warning" onClick={opis='GRIT17-18',e=>klik(e)}>Zakazi trening </Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
