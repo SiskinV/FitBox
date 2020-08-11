@@ -29,6 +29,59 @@ function LandingPage() {
       document.body.classList.remove("sidebar-collapse");
     };
   });
+  var svi_treninzi = [{
+    name: 'Parental Yoga',
+    comments: [] ,
+    date: 'Ponedeljak',
+    vreme: '14-16',
+  },{
+    name: 'Grit',
+    comments: [] ,
+    date: 'Ponedeljak',
+    vreme: '16-18',
+  },{
+    name: 'Gluteus',
+    comments: [] ,
+    date: 'Ponedeljak',
+    vreme: '18-20',
+  },{
+    name: 'E-spinning',
+    comments: [] ,
+    date: 'Ponedeljak',
+    vreme: '20-22',
+  },{
+    name: 'Yoga',
+    comments: [] ,
+    date: 'Sreda',
+    vreme: '14-16',
+  },{
+    name: 'Pilates',
+    comments: [] ,
+    date: 'Sreda',
+    vreme: '16-18',
+  },{
+    name: 'Zumba',
+    comments: [] ,
+    date: 'Sreda',
+    vreme: '18-20',
+  },{
+    name: 'E-Core',
+    comments: [] ,
+    date: 'Sreda',
+    vreme: '20-22',
+  },{
+    name: 'Les Mills Body Step',
+    comments: [] ,
+    date: 'Petak',
+    vreme: '14-16',
+  },{
+    name: 'Les Mills Body Combat',
+    comments: [] ,
+    date: 'Petak',
+    vreme: '16-18',
+  }
+];
+localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
   return (
     <>
       <IndexNavbar />

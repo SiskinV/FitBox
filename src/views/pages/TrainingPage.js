@@ -27,36 +27,32 @@ import TrainingPageHeader from "components/Headers/TrainingPageHeader";
 let cntId=0;
 let plus=[4,5,7,0,2,1,4,5,7,6];
 let minus=[2,1,7,3,2,5,1,2,1,3];
+let ocena=[[4.56,10],[2.11,7],[3.27,8],[4.11,8],[3.86,9],[3.77,7],[4.15,6],[4.10,10],[4.15,14],[4.77,7]]
 const pplus =(e,id)=>{
 plus[id]+=1;
 console.log(plus);
+console.log(ocena[0][1]);
 }
 const mminus = (e,id)=>{
 minus[id]+=1;
 console.log(minus);
 }
+const ocenjivanje=(e,id,zadato)=>{
+ocena[id][0]=(ocena[id][0]*ocena[id][1]+zadato)/(ocena[id][1]+1);
+ocena[id][1]+=1;
+}
 const TrainingPage = () => {
     
-    const [buttonText1, setButtonText1] = React.useState(plus[0]);
-    const [buttonText2, setButtonText2] = React.useState(minus[0]);
-    const [buttonText3, setButtonText3] = React.useState(plus[1]);
-    const [buttonText4, setButtonText4] = React.useState(minus[1]);
-    const [buttonText5, setButtonText5] = React.useState(plus[2]);
-    const [buttonText6, setButtonText6] = React.useState(minus[2]);
-    const [buttonText7, setButtonText7] = React.useState(plus[3]);
-    const [buttonText8, setButtonText8] = React.useState(minus[3]);
-    const [buttonText9, setButtonText9] = React.useState(plus[4]);
-    const [buttonText10, setButtonText10] = React.useState(minus[4]);
-    const [buttonText11, setButtonText11] = React.useState(plus[5]);
-    const [buttonText12, setButtonText12] = React.useState(minus[5]);
-    const [buttonText13, setButtonText13] = React.useState(plus[6]);
-    const [buttonText14, setButtonText14] = React.useState(minus[6]);
-    const [buttonText15, setButtonText15] = React.useState(plus[7]);
-    const [buttonText16, setButtonText16] = React.useState(minus[7]);
-    const [buttonText17, setButtonText17] = React.useState(plus[8]);
-    const [buttonText18, setButtonText18] = React.useState(minus[8]);
-    const [buttonText19, setButtonText19] = React.useState(plus[9]);
-    const [buttonText20, setButtonText20] = React.useState(minus[9]);
+    const [buttonText1, setButtonText1] = React.useState(ocena[0][0]);
+    const [buttonText2, setButtonText2] = React.useState(ocena[1][0]);
+    const [buttonText3, setButtonText3] = React.useState(ocena[2][0]);
+    const [buttonText4, setButtonText4] = React.useState(ocena[3][0]);
+    const [buttonText5, setButtonText5] = React.useState(ocena[4][0]);
+    const [buttonText6, setButtonText6] = React.useState(ocena[5][0]);
+    const [buttonText7, setButtonText7] = React.useState(ocena[6][0]);
+    const [buttonText8, setButtonText8] = React.useState(ocena[7][0]);
+    const [buttonText9, setButtonText9] = React.useState(ocena[8][0]);
+    const [buttonText10, setButtonText10] = React.useState(ocena[9][0]);
     
     const [pills, setPills] = React.useState("2");
     React.useEffect(() => {
@@ -175,9 +171,12 @@ const TrainingPage = () => {
                                                             Trajanje: 2h
                                                             Tezina:2
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,0);setButtonText1(plus[0])}}>+{buttonText1}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,0);setButtonText2(minus[0])}}>-{buttonText2}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,0,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,0,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,0,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,0,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,0,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText1(Number(Math.round(parseFloat(ocena[0][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText1}</Button>
                                                        
                                                     </CardBody>
                                                 </Card>
@@ -192,9 +191,12 @@ const TrainingPage = () => {
                                                             Trajanje: 2h 
                                                             Tezina:2
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,1);setButtonText3(plus[1])}}>+{buttonText3}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,1);setButtonText4(minus[1])}}>-{buttonText4}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,1,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,1,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,1,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,1,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,1,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText2(Number(Math.round(parseFloat(ocena[1][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText2}</Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -210,9 +212,12 @@ const TrainingPage = () => {
                                                             Trajanje: 2h
                                                             Tezina:2
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,2);setButtonText5(plus[2])}}>+{buttonText5}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,2);setButtonText6(minus[2])}}>-{buttonText6}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,2,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,2,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,2,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,2,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,2,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText3(Number(Math.round(parseFloat(ocena[2][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText3}</Button>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
@@ -224,9 +229,12 @@ const TrainingPage = () => {
                                                         Postoji razlog za to, osim što će te se dobro prezonijiti izgbućete
                                                         preko 500 kalorija.
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,3);setButtonText7(plus[3])}}>+{buttonText7}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,3);setButtonText8(minus[3])}}>-{buttonText8}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,3,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,3,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,3,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,3,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,3,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText4(Number(Math.round(parseFloat(ocena[3][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText4}</Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -244,9 +252,12 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         Tradicija vežbanja više hiljada godina, obuhvata fizičke vežbe i vežbe disanja u cilju poboljšanja kompletnog energetskog stanja čoveka. Praktična disciplina koja povezuje um, telo i duh na potpuno prirodan način. Vežbe deluju na najvažnije centre u telu podižući fizičko i mentalno zdravlje na viši nivo. Razvija se fizička snaga, povećava izdržljivost i fleksibilnost, ublažava umor i stres, a sa druge strane diže nivo energije u organizmu pa samim tim poboljšava celokupno zdravsveno stanje. Nema ograničenja, preporučuje se svima!
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,4);setButtonText9(plus[4])}}>+{buttonText9}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,4);setButtonText10(minus[4])}}>-{buttonText10}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,4,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,4,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,4,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,4,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,4,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText5(Number(Math.round(parseFloat(ocena[4][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText5}</Button>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
@@ -257,9 +268,12 @@ const TrainingPage = () => {
                                                         Pilates je zamišljen da bude kompletna disciplina fizičkog vežbanja.
                                                         Mada, možda će se početnicima činiti da on ne zadovoljava u dovoljnoj meri kardio-vaskularni trening. Ipak, jednom kada se u njemu usavršite, Pilates trening ojačaće i preoblikovati (izravnati) celo vaše telo. Pilates naširoko izbegava jake udarce, veliku izlaznu snagu i teška mišićna i skeletna opterećenja. Naglasak nije jednostavno na sticanju mišićne mase. Njegov fokus je jedinstven i stavlja naglasak na izduživanje i poravnjanje, i on može u tome veoma uspešno da uvežba mišiće predupređujući time razne povrede.
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,5);setButtonText11(plus[5])}}>+{buttonText11}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,5);setButtonText12(minus[5])}}>-{buttonText12}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,5,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,5,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,5,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,5,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,5,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText6(Number(Math.round(parseFloat(ocena[5][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText6}</Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -271,9 +285,12 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         Osnovana je 2001. godine. Zumba Fitnes je svetski brend koji spaja fitnes, zabavu i kulturu u uzbudljivi “dance” koncept! Zumba® treninzi u Beogradu u Ethnogymu na Banjici  su kao fitnes žurka koja sadrži latino muziku, latino plesove i koreografiju koja se lako prati. Dok se zabavljate na treningu ovaj aerobni program će vam pokrenuti celo telo, dobro će vas oznojiti i uneti osvežavajuću energiju dalekih južnih mora. Zumba utapa jednostavne plesne poktere u hipnotičke ritmove salse, sambe, tanga…
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,6);setButtonText13(plus[6])}}>+{buttonText13}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,6);setButtonText14(minus[6])}}>-{buttonText14}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,6,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,6,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,6,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,6,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,6,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText7(Number(Math.round(parseFloat(ocena[6][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText7}</Button>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
@@ -286,9 +303,12 @@ const TrainingPage = () => {
                                                         E-Core je ekspres program baziran na miksu jednostavnih i sigurnih vežbi.
                                                         Sa E- Core-om uživaćete u izazovu i uspehu vežbi koje će vas dovesti do željenih trbušnjaka
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,7);setButtonText15(plus[7])}}>+{buttonText15}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,7);setButtonText16(minus[7])}}>-{buttonText16}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,7,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,7,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,7,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,7,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,7,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText8(Number(Math.round(parseFloat(ocena[7][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText8}</Button>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -306,9 +326,12 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         BODYSTEP™ je energični trening sa steperom koji čini da se osećate slobodnim tokom treninga.  Ako saberemo podesive stepere, jednostavne korake (preko ili oko stepera) sa sjajnom muzikom koju svi pevaju i dostpunim instruktorom, koga ćete lako pratiti, imaćete sjajan trening. Kardio blokovi će probuditi vaš sistem za sagorevanje kalorija i ubaciti ga u sledeću brzinu, sve to praćeno kondicionim pesmama koje će oblikovati vaše telo.
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,8);setButtonText17(plus[8])}}>+{buttonText17}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,8);setButtonText18(minus[8])}}>-{buttonText18}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,8,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,8,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,8,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,8,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,8,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText9(Number(Math.round(parseFloat(ocena[8][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText9}</Button>
                                                     </CardBody>
                                                 </Card>
 
@@ -321,9 +344,12 @@ const TrainingPage = () => {
                                                         <CardText>
                                                         BODY COMBAT™ je grupni fitnes kadrio trening u kome ste svaki put vi pobednici. Jedini trening na kome možete totalno da oslobodite sve negativno iz sebe i da se nakon toga osećate sjajno. Ovaj energični program je inspirisan mešavinom borilačkih veština i koriste se pokreti iz raznih disciplina kao što su: karate, boks, tai chi i muay thai. Iskustvo koje vežbači dobijaju na treningu slušajući sjajnu motivacionu muziku i prateći savršene instruktore čini to da vežbači požele da nikad ne izađu iz ringa (fitnes sale). Baš to je ono što BODYCOMBAT™ čini svetski najpopularnijim   borilačkim fitnes treningom. Tokom ovog krajnje ratničkog treninga vi ćete udarati, napadati, šutirati i izvoditi katu i tim putem sagoriti mnogo kalorija. Kao i svi LES MILLS™ programi, na svaka tri meseca BODYCOMBAT™ dobija novu muziku i koreografiju koju dizajniraju najbolji Master treneri i MMA experti.
                                                         </CardText>
-                                                        <Button color="warning" onClick={(e)=>{pplus(e,9);setButtonText19(plus[9])}}>+{buttonText19}</Button>
-                                                        <br/>
-                                                        <Button color="warning" onClick={(e)=>{mminus(e,9);setButtonText20(minus[9])}}>-{buttonText20}</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,9,1);}}>1</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,9,2);}}>2</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,9,3);}}>3</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,9,4);}}>4</Button>
+                                                        <Button color="warning" onClick={(e)=>{ocenjivanje(e,9,5);}}>5</Button>
+                                                        <Button color="warning" onClick={(e)=>{setButtonText10(Number(Math.round(parseFloat(ocena[9][0] + 'e' + 2)) + 'e-' + 2))}}>ocena: {buttonText10}</Button>
                                                     </CardBody>
                                                 </Card>
 
