@@ -58,13 +58,12 @@ const registrujSe = (event) => {
             username: document.getElementById('username').value,
             email: document.getElementById('email').value,
             password: document.getElementById('password').value,
+            opis:[],
             trainings: [{
                 name: String,
-                done: String,
-                comments: {
-                    number: String,
-                    desc: String,
-                },
+                comments: [] ,
+                date: String,
+                vreme: String
             }]
         };
 
