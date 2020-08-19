@@ -78,7 +78,10 @@ function ProfilePage1() {
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
   const [rows, setRows] = React.useState([]);
 
-
+  function prevod(){
+    var jezik=JSON.parse(localStorage.getItem('Jezik'));
+    return jezik;
+ }
 
   function r() {
 
@@ -138,7 +141,7 @@ function ProfilePage1() {
           <Container>
             <div className="button-container">
               <Button className="btn-round" color="info" size="lg">
-                Follow
+                {prevod?'Prati':'Follow'}
               </Button>
               <Button
                 className="btn-round btn-icon"
@@ -149,7 +152,7 @@ function ProfilePage1() {
                 <i className="fab fa-twitter"></i>
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip515203352">
-                Follow me on Twitter
+              {prevod?'Prati me na Twitter-u':'Follow me on Twitter'}
               </UncontrolledTooltip>
               <Button
                 className="btn-round btn-icon"
@@ -160,7 +163,7 @@ function ProfilePage1() {
                 <i className="fab fa-instagram"></i>
               </Button>
               <UncontrolledTooltip delay={0} target="tooltip340339231">
-                Follow me on Instagram
+              {prevod?'Prati me na Instagram-u':'Follow me on Instagram'}
               </UncontrolledTooltip>
             </div>
             <h3 className="title">O meni</h3>

@@ -33,55 +33,67 @@ function LandingPage() {
     name: 'Parental Yoga',
     comments: [] ,
     date: 'Ponedeljak',
+    id:'0',
     vreme: '14-16',
   },{
     name: 'Grit',
     comments: [] ,
     date: 'Ponedeljak',
+    id:'1',
     vreme: '16-18',
   },{
     name: 'Gluteus',
     comments: [] ,
     date: 'Ponedeljak',
+    id:'2',
     vreme: '18-20',
   },{
     name: 'E-spinning',
     comments: [] ,
     date: 'Ponedeljak',
+    id:'3',
     vreme: '20-22',
   },{
     name: 'Yoga',
     comments: [] ,
     date: 'Sreda',
+    id:'4',
     vreme: '14-16',
   },{
     name: 'Pilates',
     comments: [] ,
     date: 'Sreda',
+    id:'5',
     vreme: '16-18',
   },{
     name: 'Zumba',
     comments: [] ,
     date: 'Sreda',
+    id:'6',
     vreme: '18-20',
   },{
     name: 'E-Core',
     comments: [] ,
     date: 'Sreda',
+    id:'7',
     vreme: '20-22',
   },{
     name: 'Les Mills Body Step',
     comments: [] ,
     date: 'Petak',
+    id:'8',
     vreme: '14-16',
   },{
     name: 'Les Mills Body Combat',
     comments: [] ,
     date: 'Petak',
+    id:'9',
     vreme: '16-18',
   }
 ];
 localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
+var jezik=true;
+localStorage.setItem('Jezik',JSON.stringify(jezik));
   return (
     <>
       <IndexNavbar />

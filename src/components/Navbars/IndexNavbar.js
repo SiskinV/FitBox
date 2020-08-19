@@ -16,10 +16,25 @@ import {
   Container,
   UncontrolledTooltip
 } from "reactstrap";
-
+var jezik=true;
+function prevod(){
+  jezik=JSON.parse(localStorage.getItem('Jezik'));
+  window.location.reload(false);
+  return jezik;
+ 
+}
+function promeniJezik(e){
+  e.preventDefault();
+  console.log(jezik);
+  jezik=!jezik;
+  console.log(jezik);
+  localStorage.setItem('Jezik', jezik);
+  
+}
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [jezik,prevod]=React.useState(true);
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
@@ -188,6 +203,18 @@ function IndexNavbar() {
                 <UncontrolledTooltip target="#instagram-tooltip">
                   Follow us on Instagram
                 </UncontrolledTooltip>
+              </NavItem>
+              <NavItem>
+              <Button
+                  className="nav-link btn-neutral"
+                  color="info"
+                  href="#pablo"
+                  id="upgrade-to-pro"
+                  onClick={(e)=>{promeniJezik(e);}}
+                >
+                  <i className="now-ui-icons ui-1_calendar-60 mr-1"></i>
+                  <p>{prevod?'Promeni Jezik':'Change Language'}</p>
+                </Button>
               </NavItem>
 
             </Nav>
