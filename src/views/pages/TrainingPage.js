@@ -117,13 +117,13 @@ const TrainingPage = () => {
                                 Follow me on Instagram
               </UncontrolledTooltip>
                         </div>
-                        <h3 className="title">O nama</h3>
+                        <h3 className="title">About us</h3>
                         <h5 className="description">
-                            Naši treninzi pomažu korisnicima da ostvare željene ciljeve u što kraće vreme.
-                            Ukoliko si nov pri vežbanju i nemaš veliko predznanje o svome telu ili se plašiš povreda,
-                            tu su naši profesionalni treneri koji će te izvesti na pravi i željeni put.
+                        Our trainings help users achieve the desired goals in the shortest possible time.
+                             If you are new to exercise and do not have a great knowledge of your body or are afraid of injury,
+                             there are our professional trainers who will guide you on the right and desired path.
 
-                            TEKST TEKST
+
                          </h5>
                         <Row>
                             <Col className="ml-auto mr-auto" md="6">
@@ -183,13 +183,13 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">Prenatal Yoga</CardTitle>
                                                         <CardText>
-                                                            Prenatal yoga je savršena aktivnost za trudnice jer pruža psihofizičku pripremu za porođaj, opušta i smiruje telo, uči pravilnom držanju i ono što je možda i najlepše upoznaćete gomilu mama koje dele iste brige kao i vi!
-                                                            Program Prenatal yoge je takav da se prilagođava trimestru u kome se trenutno nalazite, tako da ćete uvek vežbati bezbedno i u granicama svog trenutnog stanja i mogućnosti. Program se sastoji od brojnih fizičkih vežbi i asana, sadrži vežbe disanja za trudnice, kao i opuštanje – yoga Nidra!
-                                                            Tokom trudnoće naše telo se stalno menja!
+                                                        Prenatal yoga is a perfect activity for pregnant women because it provides psychophysical preparation for childbirth, relaxes and calms the body, teaches proper posture and what is perhaps the most beautiful you will meet a bunch of moms who share the same worries as you!
+                                                             The Prenatal yoga program is such that it adapts to the trimester you are currently in, so you will always practice safely and within the limits of your current condition and capabilities. The program consists of numerous physical exercises and asanas, contains breathing exercises for pregnant women, as well as relaxation - yoga Nidra!
+                                                             During pregnancy, our body is constantly changing!
                                                         </CardText>
                                                         <CardText>
-                                                            Trajanje: 2h
-                                                            Tezina:2
+                                                            Duration: 2h
+                                                            Weight:2
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 0, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 0, 2); }}>2</Button>
@@ -205,11 +205,11 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">GRIT</CardTitle>
                                                         <CardText>
-                                                            Kreiran radi sagorevanja masti i značajnog uvećanja atletskih sposobnosti, ova tridesetominutna tim trening sesija ne koristi nikakvu opremu osim samog tela. Trening vode obučeni treneri, i obezbeđuje izazov i intenzitet koji su vam neophodni da biste sopstveni trening preneli na viši nivo i zaista ostvarili rezultate.
+                                                        Created to burn fat and significantly increase athletic ability, this thirty-minute team training session uses no equipment other than the body itself. The training is led by trained trainers, and provides the challenge and intensity you need to take your own training to the next level and really achieve results.
                                                         </CardText>
                                                         <CardText>
-                                                            Trajanje: 2h
-                                                            Tezina:2
+                                                            Duration: 2h
+                                                            Weight:2
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 1, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 1, 2); }}>2</Button>
@@ -226,11 +226,11 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">Gluteus</CardTitle>
                                                         <CardText>
-                                                            Gluteus je trening na kom se efikasno oblikuju zadnjica i noge. Za samo mesec dana mogu se videti merljivi rezultati promena na oblinama i vašoj zadnjici.
+                                                        Gluteus is a training in which the buttocks and legs are effectively shaped. In just a month, you can see measurable results of changes in curves and your buttocks.
                                                         </CardText>
                                                         <CardText>
-                                                            Trajanje: 2h
-                                                            Tezina:2
+                                                            Duration: 2h
+                                                            Weight:2
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 2, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 2, 2); }}>2</Button>
@@ -245,9 +245,13 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">E-SPINNING</CardTitle>
                                                         <CardText>
-                                                            Spining spada u najpopularnije kardio treninge.
-                                                            Postoji razlog za to, osim što će te se dobro prezonijiti izgbućete
-                                                            preko 500 kalorija.
+                                                        Spinning is one of the most popular cardio workouts.
+                                                             There is a reason for this, apart from the fact that you will lose weight well
+                                                             over 500 calories.
+                                                        </CardText>
+                                                        <CardText>
+                                                            Duration: 2h
+                                                            Weight:4
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 3, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 3, 2); }}>2</Button>
@@ -270,7 +274,11 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">Yoga</CardTitle>
                                                         <CardText>
-                                                            Tradicija vežbanja više hiljada godina, obuhvata fizičke vežbe i vežbe disanja u cilju poboljšanja kompletnog energetskog stanja čoveka. Praktična disciplina koja povezuje um, telo i duh na potpuno prirodan način. Vežbe deluju na najvažnije centre u telu podižući fizičko i mentalno zdravlje na viši nivo. Razvija se fizička snaga, povećava izdržljivost i fleksibilnost, ublažava umor i stres, a sa druge strane diže nivo energije u organizmu pa samim tim poboljšava celokupno zdravsveno stanje. Nema ograničenja, preporučuje se svima!
+                                                        The tradition of exercising for thousands of years includes physical exercises and breathing exercises in order to improve the complete energy state of a person. A practical discipline that connects the mind, body and spirit in a completely natural way. Exercise works on the most important centers in the body, raising physical and mental health to a higher level. It develops physical strength, increases endurance and flexibility, relieves fatigue and stress, and on the other hand raises the level of energy in the body and thus improves overall health. No restrictions, recommended for everyone!
+                                                        </CardText>
+                                                        <CardText>
+                                                            Duration: 2h
+                                                            Weight:1
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 4, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 4, 2); }}>2</Button>
@@ -285,8 +293,12 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">Pilates</CardTitle>
                                                         <CardText>
-                                                            Pilates je zamišljen da bude kompletna disciplina fizičkog vežbanja.
-                                                            Mada, možda će se početnicima činiti da on ne zadovoljava u dovoljnoj meri kardio-vaskularni trening. Ipak, jednom kada se u njemu usavršite, Pilates trening ojačaće i preoblikovati (izravnati) celo vaše telo. Pilates naširoko izbegava jake udarce, veliku izlaznu snagu i teška mišićna i skeletna opterećenja. Naglasak nije jednostavno na sticanju mišićne mase. Njegov fokus je jedinstven i stavlja naglasak na izduživanje i poravnjanje, i on može u tome veoma uspešno da uvežba mišiće predupređujući time razne povrede.
+                                                        Pilates largely avoids high impact, high power output, and heavy muscular and skeletal loading.
+                                                             Although, it may seem to beginners that it does not satisfy cardiovascular training to a sufficient extent. However, once you improve in it, Pilates training will strengthen and reshape (flatten) your entire body. Pilates largely avoids high impact, high power output, and heavy muscular and skeletal strain. The emphasis is not simply on gaining muscle mass. His focus is unique and he emphasizes stretching and straightening, and he can train his muscles very successfully, thus preventing various injuries.
+                                                        </CardText>
+                                                        <CardText>
+                                                            Duration: 2h
+                                                            Weight:3
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 5, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 5, 2); }}>2</Button>
@@ -303,7 +315,11 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">Zumba</CardTitle>
                                                         <CardText>
-                                                            Osnovana je 2001. godine. Zumba Fitnes je svetski brend koji spaja fitnes, zabavu i kulturu u uzbudljivi “dance” koncept! Zumba® treninzi u Beogradu u Ethnogymu na Banjici  su kao fitnes žurka koja sadrži latino muziku, latino plesove i koreografiju koja se lako prati. Dok se zabavljate na treningu ovaj aerobni program će vam pokrenuti celo telo, dobro će vas oznojiti i uneti osvežavajuću energiju dalekih južnih mora. Zumba utapa jednostavne plesne poktere u hipnotičke ritmove salse, sambe, tanga…
+                                                        It was founded in 2001. Zumba Fitness is a global brand that combines fitness, entertainment and culture into an exciting "dance" concept! Zumba® trainings in Belgrade at Ethnogym in Banjica are like a fitness party that contains Latin music, Latin dances and choreography that is easy to follow. While you are having fun in training, this aerobic program will move your whole body, sweat you well and bring in the refreshing energy of the distant southern seas. Zumba drowns simple dance pokers into hypnotic rhythms of salsa, samba, tango…
+                                                        </CardText>
+                                                        <CardText>
+                                                            Duration: 2h
+                                                            Weight:1
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 6, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 6, 2); }}>2</Button>
@@ -318,10 +334,14 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">E-CORE</CardTitle>
                                                         <CardText>
-                                                            E-Core je nov koncept grupnog fitness treninga.
-                                                            Ovaj čas traje 30 minuta i fokusira se na abdomen, oblikus i leđne mišiće.
-                                                            E-Core je ekspres program baziran na miksu jednostavnih i sigurnih vežbi.
-                                                            Sa E- Core-om uživaćete u izazovu i uspehu vežbi koje će vas dovesti do željenih trbušnjaka
+                                                        E-Core is a new concept of group fitness training.
+                                                             This class lasts 30 minutes and focuses on the abdomen, shape and back muscles.
+                                                             E-Core is an express program based on a mix of simple and safe exercises.
+                                                             With E-Core you will enjoy the challenge and success of exercises that will lead you to the desired abs
+                                                        </CardText>
+                                                        <CardText>
+                                                            Duration: 2h
+                                                            Weight:3
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 7, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 7, 2); }}>2</Button>
@@ -344,7 +364,11 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">Les Mills Body Step</CardTitle>
                                                         <CardText>
-                                                            BODYSTEP™ je energični trening sa steperom koji čini da se osećate slobodnim tokom treninga.  Ako saberemo podesive stepere, jednostavne korake (preko ili oko stepera) sa sjajnom muzikom koju svi pevaju i dostpunim instruktorom, koga ćete lako pratiti, imaćete sjajan trening. Kardio blokovi će probuditi vaš sistem za sagorevanje kalorija i ubaciti ga u sledeću brzinu, sve to praćeno kondicionim pesmama koje će oblikovati vaše telo.
+                                                        BODYSTEP ™ is an energetic training with a stepper that makes you feel free during training. If we add adjustable steppers, simple steps (over or around the steppers) with great music that everyone sings and an accessible instructor, when you will easily follow, you will have a great workout. Cardio blocks will wake up your calorie burning system and put it in the next gear, all accompanied by fitness songs that will shape your body.
+                                                        </CardText>
+                                                        <CardText>
+                                                            Duration: 2h
+                                                            Weight:3
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 8, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 8, 2); }}>2</Button>
@@ -362,7 +386,11 @@ const TrainingPage = () => {
                                                     <CardBody>
                                                         <CardTitle tag="h4">Les Mills Body Combat</CardTitle>
                                                         <CardText>
-                                                            BODY COMBAT™ je grupni fitnes kadrio trening u kome ste svaki put vi pobednici. Jedini trening na kome možete totalno da oslobodite sve negativno iz sebe i da se nakon toga osećate sjajno. Ovaj energični program je inspirisan mešavinom borilačkih veština i koriste se pokreti iz raznih disciplina kao što su: karate, boks, tai chi i muay thai. Iskustvo koje vežbači dobijaju na treningu slušajući sjajnu motivacionu muziku i prateći savršene instruktore čini to da vežbači požele da nikad ne izađu iz ringa (fitnes sale). Baš to je ono što BODYCOMBAT™ čini svetski najpopularnijim   borilačkim fitnes treningom. Tokom ovog krajnje ratničkog treninga vi ćete udarati, napadati, šutirati i izvoditi katu i tim putem sagoriti mnogo kalorija. Kao i svi LES MILLS™ programi, na svaka tri meseca BODYCOMBAT™ dobija novu muziku i koreografiju koju dizajniraju najbolji Master treneri i MMA experti.
+                                                        BODY COMBAT ™ is a group fitness cadre training in which you are the winner every time. The only training where you can totally release everything negative from yourself and feel great afterwards. This energetic program is inspired by a mixture of martial arts and uses movements from various disciplines such as: karate, boxing, tai chi and muay thai. The experience that exercisers gain in training by listening to great motivational music and following perfect instructors makes exercisers want to never leave the ring (gym). This is exactly what makes BODYCOMBAT ™ the world's most popular martial fitness training. During this ultimate warrior training, you will hit, attack, shoot and perform the floor and burn a lot of calories that way. Like all LES MILLS programs, every three months BODYCOMBAT receives new music and choreography designed by the best Master trainers and MMA experts.
+                                                        </CardText>
+                                                        <CardText>
+                                                            Duration: 2h
+                                                            Weight:4
                                                         </CardText>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 9, 1); }}>1</Button>
                                                         <Button color="warning" onClick={(e) => { ocenjivanje(e, 9, 2); }}>2</Button>
@@ -383,7 +411,7 @@ const TrainingPage = () => {
                             <Col className="ml-auto mr-auto" md="12">
                                 <div className="title text-center">
                                     <Button color="warning">
-                                        <a href="http://localhost:3000/zakazi-page">Zakazi trening </a>
+                                        <a href="http://localhost:3000/zakazi-page">Schedule training </a>
                                         {/* href="http://localhost:3000/masnutrireserve-page" */}
                                     </Button>
                                 </div>

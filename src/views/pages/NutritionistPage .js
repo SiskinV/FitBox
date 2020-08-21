@@ -31,13 +31,13 @@ const NutrtionistPage = () => {
                     <Container>
                     <Row>
                         <Col className="ml-auto mr-auto text-center" md="8">
-                            <h2 className="title">Trening vs Ishrana?</h2>
+                            <h2 className="title">Training vs Nutrition?</h2>
                             <h5 className="description">
-                                Ne kazu dzabe da je trening 30% a ishrana 70%.Trening bez zdrave ishrane gotovo da nema efekta.
-                                Trening i ishrana su vezani jedno za drugo i ne mogu jedno bez drugog.Bez obzira da li zelite
-                                da skinete masno tkivo ili da dobijete misice ishrana je veoma bitan faktor.
+                            They do not say for free that training is 30% and nutrition is 70%. Training without a healthy diet has almost no effect.
+                                 Training and nutrition are related to each other and I can't do without each other. Whether you want to or not
+                                 to lose fat or gain muscle nutrition is a very important factor.
 
-                                TEKST TEKST TEKST
+                                 TEXT TEXT TEXT
                             </h5>
                         </Col>
                     </Row>
@@ -77,35 +77,35 @@ const NutrtionistPage = () => {
                                 }}
                             ></div>
                             <h3>
-                                Sta nas cini tako posebnim?
+                            What makes us so special?
                             </h3>
                             <p>
-                                        Gospodin Šeno deli ljude na 5 tipova, u zavisnosti od psiholoških i  zdravstvenih problema. Zapamtite - 
-                                        ne postoje univerzalni saveti ishrane za sve. Jednostavno postoje okviri oko kojih se gradi vaša individualna ishrana, piše Stil.kurir.rs
-                                        U podnožju italijanskih Alpa nalazi se selo Merano. Često možete čuti o njemu na televiziji,
-                                         jer su poznate ličnosti okupirale ovo seoce. Zašto? Zato što u seoskoj ambulanti u Meranu radi najbolji nutricionista na svetu Anri Šeno!
-                                        U njegovoj klinici ljudi se uče da pravilno jedu i uopšteno, kako da se ponašaju u novom vremenu.
-                                        Gospodin Šeno se smatra specijalistom za zdravu ishranu, a napisao je i mnoge knjige o tome.
+                            Mr. Cheno divides people into 5 types, depending on psychological and health problems. Remember -
+                                        there are no universal nutrition tips for everyone. There are simply frameworks around which your individual diet is built, writes Stil.kurir.rs
+                                        At the foot of the Italian Alps is the village of Merano. You can often hear about him on television,
+                                         because celebrities occupied this village. Why? Because the best nutritionist in the world, Henri Chenault, works in the village ambulance in Merano!
+                                        In his clinic, people learn to eat properly and in general, how to behave in the new time.
+                                        Mr. Cheno is considered a specialist in healthy eating, and he has written many books about it.
 
                                          
 
-                                        Danas govorimo o onome što Šeno smatra zdravom ishranom. Bili smo iznenađeni jer su mnoge 
-                                        stvari koje on govori u suprotnosti sa novim trendovima u mršavljenju. Ali kada pogledate srećna i zdrava lica pacijenata, 
-                                        shvatate da je  nutricinista za mnoge stvari u pravu. Mnogi njegovi pacijenti vremenom su mu postali prijatelji, među kojima je i 
-                                        princeza od Monaka. 
+                                        Today we are talking about what Sheno considers a healthy diet. We were surprised because there are many
+                                        things he says contrary to new trends in weight loss. But when you look at the happy and healthy faces of patients,
+                                        you realize that the nutritionist is right about many things. Many of his patients eventually became his friends, including
+                                        Princess of Monaco.
                                         
                             </p>
                             <p>
                                 
-                                        Šeno tvrdi: "Kafa nije najbolji početak dana. I nije važno da li je crna ili sa mlekom. 
-                                        Interesantna činjenica: Ako je neko danas pio kafu sa mlekom i sutradan je umro. 
-                                        Autopsija otkrije neprobavljenu kafu sa mlekom u njegovom želucu!
-                                        Zato je najbolje piti zeleni čaj  ujutru, a najviše 1 šoljicu espresa tokom dana! 
-                                        Uostalom, kafa bi trebalo da bude jaka i što je najvažnije - trebalo bi da je kratka!"
-                                        Nutricionisti se slažu da ujutru želudac ne bi trebalo opeterećivati. 
-                                        Važno je da želudac lagano radi, a ne da ga preopteretite za ceo dan. 
-                                        "Ja doručkujem voće. Ručak počinjem salatom, a zatim uzmem ugljene 
-                                        hidrate: pirinač ili testeninu. Uveče jedem supu od povrća.
+                            Cheno claims: "Coffee is not the best start to the day. And it doesn't matter if it is black or with milk.
+                                        Interesting fact: If someone drank coffee with milk today and died the next day.
+                                        An autopsy reveals undigested coffee with milk in his stomach!
+                                        That is why it is best to drink green tea in the morning, and at most 1 cup of espresso during the day!
+                                        After all, coffee should be strong and most importantly - it should be short! "
+                                        Nutritionists agree that the stomach should not be burdened in the morning.
+                                        It is important that the stomach works lightly, and not to overload it for the whole day.
+                                        "I have fruit for breakfast. I start lunch with a salad, and then I take charcoal
+                                        hydrates: rice or pasta. I eat vegetable soup in the evening.
                             </p>
                             <p>
                             
@@ -122,7 +122,7 @@ const NutrtionistPage = () => {
                             <Col className="ml-auto mr-auto" md="12">
                                 <div className="title text-center">
                                     <Button color="warning">
-                                        <a href="http://localhost:3000/masnutrireserve-page">Zakazi termin </a>
+                                        <a href="http://localhost:3000/masnutrireserve-page">Make an appointment </a>
                                     </Button>
                                 </div>
                             </Col>

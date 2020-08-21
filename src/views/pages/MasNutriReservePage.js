@@ -75,18 +75,18 @@ function MasNutriReservePage() {
             <Page size="A4" style={styles.page}>
                 <View style={styles.section} style={{ marginTop: "20px" }}>
                     <View style={{ textAlign: "center" }}>
-                        <Text>Zakazivanje Nutricioniste</Text>
+                        <Text>Scheduling a Nutritionist</Text>
                     </View>
 
                     <View style={styles.section}>
                         <Text>
-                            Ime i Prezime: {state.name} {state.surname}
+                            Name and Surname: {state.name} {state.surname}
                         </Text>
                         <Text>Type:{state.type}</Text>
                         <Text>Contact:{state.contact}</Text>
                         <Text>Email:{state.email} </Text>
-                        <Text>Datum: {state.date}</Text>
-                        <Text>Opis problema: {state.desc}</Text>
+                        <Text>Date: {state.date}</Text>
+                        <Text>Problem description: {state.desc}</Text>
                     </View>
                 </View>
             </Page>

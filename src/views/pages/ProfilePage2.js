@@ -65,7 +65,7 @@ function ProfilePage2() {
                                 Follow me on Instagram
               </UncontrolledTooltip>
                         </div>
-                        <h3 className="title">O meni</h3>
+                        <h3 className="title">About me</h3>
                         <h5 className="description">
                             An artist of considerable range, Ryan — the name taken by
                             Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs

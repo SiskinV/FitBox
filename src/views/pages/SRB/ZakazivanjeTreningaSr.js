@@ -28,18 +28,22 @@ var opis;
 const klik = (event, id) => {
     event.preventDefault();
     var logovan;
-    var korisnik = JSON.parse(localStorage.getItem('ulogovan'));
-    var korisnici = JSON.parse(localStorage.getItem('users'));
-    var trng = JSON.parse(localStorage.getItem('sviTreninzi'));
+    var moze=true;
+    var korisnik=JSON.parse(localStorage.getItem('ulogovan'));
+    var korisnici=JSON.parse(localStorage.getItem('users'));
+    var trng=JSON.parse(localStorage.getItem('sviTreninzi'));
     for (var i = 0; i < korisnici.length; i++) {
         if (korisnici[i].username == korisnik.username) {
-            //korisnici[i].opis=(trng[id]);
-            console.log(korisnici[i].opis);
-
-            korisnici[i].trainings.push(trng[id]);
-            localStorage.setItem('users', JSON.stringify(korisnici));
-            console.log(korisnici);
-            break;
+           //korisnici[i].opis=(trng[id]);
+           console.log(korisnici[i].opis);
+           for(var j=0;j<korisnici[i].trainings.length;j++)
+           {
+           if(parseInt(korisnici[i].trainings[j].id)==id)moze=false;
+           }
+           if(moze)korisnici[i].trainings.push(trng[id]);
+           localStorage.setItem('users', JSON.stringify(korisnici));
+           console.log(korisnici);
+           break;
         }
     }
 
