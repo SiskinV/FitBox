@@ -28,7 +28,7 @@ import {
 
 // core components
 import TransparentFooter from "components/Footers/TransparentFooter.js";
-import IndexNavbar from "components/Navbars/IndexNavbar";
+import IndexNavbarSr from "components/Navbars/IndexNavbarSr";
 
 const styles = StyleSheet.create({
     page: {
@@ -100,7 +100,7 @@ function MasNutriReservePage() {
 
     return (
         <>
-            <IndexNavbar />
+            <IndexNavbarSr />
             <div className="page-header clear-filter" filter-color="blue">
                 <div
                     className="page-header-image"
@@ -132,7 +132,7 @@ function MasNutriReservePage() {
                                             <Input
                                                 name="name"
                                                 value={state.name}
-                                                placeholder="Name..."
+                                                placeholder="Ime..."
                                                 type="text"
                                                 onFocus={() => setFirstFocus(true)}
                                                 onBlur={() => setFirstFocus(false)}
@@ -153,7 +153,7 @@ function MasNutriReservePage() {
                                             <Input
                                                 name="surname"
                                                 value={state.surname}
-                                                placeholder="Surname..."
+                                                placeholder="Prezime..."
                                                 type="text"
                                                 onFocus={() => setLastFocus(true)}
                                                 onBlur={() => setLastFocus(false)}
@@ -174,7 +174,7 @@ function MasNutriReservePage() {
                                             <Input
                                                 name="contact"
                                                 value={state.contact}
-                                                placeholder="Contact..."
+                                                placeholder="Kontakt..."
                                                 type="text"
                                                 onFocus={() => setLastFocus(true)}
                                                 onBlur={() => setLastFocus(false)}
@@ -216,7 +216,7 @@ function MasNutriReservePage() {
                                             <Input
                                                 name="date"
                                                 value={state.date}
-                                                placeholder="Date..."
+                                                placeholder="Datum..."
                                                 type="text"
                                                 onFocus={() => setLastFocus(true)}
                                                 onBlur={() => setLastFocus(false)}
@@ -237,7 +237,7 @@ function MasNutriReservePage() {
                                             <Input
                                                 name="desc"
                                                 value={state.desc}
-                                                placeholder="Descr..."
+                                                placeholder="Opis..."
                                                 type="text"
                                                 onFocus={() => setLastFocus(true)}
                                                 onBlur={() => setLastFocus(false)}
@@ -258,7 +258,7 @@ function MasNutriReservePage() {
                                             <Input
                                                 name="type"
                                                 value={state.type}
-                                                placeholder="Type..."
+                                                placeholder="Tip..."
                                                 type="text"
                                                 onFocus={() => setLastFocus(true)}
                                                 onBlur={() => setLastFocus(false)}
@@ -293,7 +293,7 @@ function MasNutriReservePage() {
                                                         fileName="nutricionista.pdf"
                                                     >
                                                         {({ blob, url, loading, error }) => {
-                                                            return loading ? "Loading..." : "Reserve!";
+                                                            return loading ? "Ucitava se dokument..." : "Rezervisi!";
                                                         }}
                                                     </PDFDownloadLink>
                                                 </a>

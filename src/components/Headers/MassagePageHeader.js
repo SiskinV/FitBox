@@ -33,20 +33,20 @@ function MassagePageHeader() {
                 ></div>
                 <div className="content-center">
                     <Container>
-                        <h1 className="title">Najbolje masaze u gradu</h1>
+                        <h1 className="title">Best massages in townn</h1>
                         <Row>
                             <Col className="ml-auto mr-auto text-center " md="4">
                                 <div>
                                     <blockquote className="blockqoute">
-                                        <h2> Radno vreme :</h2>
-                                        <p> Pon-Pet: 00-24h </p>
-                                        <p> Sub-Ned: 8-21h</p>
+                                        <h2> Working hours :</h2>
+                                        <p> Mon-Fri: 00-24h </p>
+                                        <p> Sat-Sun: 8-21h</p>
                                     </blockquote>
                                 </div>
                             </Col>
                             <Col className="ml-auto mr-auto text-center " md="4">
                                 <div>
-                                    <h2> Lokacija: </h2>
+                                    <h2> Location: </h2>
                                     <h3> Vojvodjanska 32</h3>
                                     <h3> Majke Jevrosime 12</h3>
 
@@ -54,7 +54,7 @@ function MassagePageHeader() {
                             </Col>
                             <Col className="ml-auto mr-auto text-center " md="4">
                                 <div>
-                                    <h2> Kontakt: </h2>
+                                    <h2> Contact: </h2>
                                     <h3> +381631894231</h3>
                                     <h3> +381621234567</h3>
 

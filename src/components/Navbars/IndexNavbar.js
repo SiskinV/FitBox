@@ -20,16 +20,21 @@ import {
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
-  const [lan, setLan] = React.useState(0);
+  const [lan, setLan] = React.useState(localStorage.getItem("lan"));
 
   function postavi(a) {
     if (localStorage.getItem("lan") == null) {
-      localStorage.setItem("lan", a);
       setLan(a);
+      localStorage.setItem("lan", a);
     } else {
       setLan(a);
-      localStorage.setItem('lan', lan);
+      localStorage.setItem("lan", a);
+
     }
+    if (a == true) {
+      window.location.href = "http://localhost:3000/landing-pageSr"
+    }
+    //console.log(lan);
   }
 
   React.useEffect(() => {
@@ -100,7 +105,7 @@ function IndexNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons objects_globe"></i>
-                  {lan ? (<p>Starting</p>) : (<p>Landing</p>)}
+                  <p>Landing</p>
 
                 </NavLink>
               </NavItem>
@@ -113,20 +118,20 @@ function IndexNavbar() {
                   onClick={e => e.preventDefault()}
                 >
                   <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
-                  {lan ? (<p>Usluge</p>) : (<p>Services</p>)}
+                  <p>Services</p>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem to="/training-page" tag={Link}>
                     <i className="now-ui-icons sport_user-run mr-1"></i>
-                    {lan ? "Treninzi" : "Trainings"}
+                    Trainings
                   </DropdownItem>
                   <DropdownItem to="/massage-page" tag={Link}>
                     <i className="now-ui-icons loader_refresh mr-1"></i>
-                    {lan ? "Masaze" : "Masage"}
+                    Masage
                   </DropdownItem>
                   <DropdownItem to="/nutritionist-page" tag={Link}>
                     <i className="now-ui-icons files_paper mr-1"></i>
-                    {lan ? "Nutricionista" : "Nutritionist"}
+                    Nutritionist
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -139,13 +144,11 @@ function IndexNavbar() {
                   onClick={e => e.preventDefault()}
                 >
                   <i className="now-ui-icons ui-1_calendar-60 mr-1"></i>
-                  {lan ? (<p>Zakazivanje Treninga</p>) : (<p>Schedule training</p>)}
+                  <p>Schedule training</p>
                 </Button>
-                {lan ? (<UncontrolledTooltip target="#upgrade-to-pro">
-                  Uskoro !
-                </UncontrolledTooltip>) : (<UncontrolledTooltip target="#upgrade-to-pro">
+                <UncontrolledTooltip target="#upgrade-to-pro">
                   Cooming soon!
-                </UncontrolledTooltip>)}
+                </UncontrolledTooltip>
               </NavItem>
               <NavItem>
                 <NavLink
@@ -153,7 +156,7 @@ function IndexNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons users_single-02 mr-1" />
-                  {lan ? (<p>Profil</p>) : (<p>Profile</p>)}
+                  <p>Profile</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -162,7 +165,7 @@ function IndexNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons business_badge mr-1" />
-                  {lan ? (<p>Uloguj se</p>) : (<p>Log in</p>)}
+                  <p>Log in</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -209,7 +212,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  onClick={e => { e.preventDefault(); postavi(0); }}
+                  onClick={e => { e.preventDefault(); }}
                 >
                   <p>eng</p>
                 </NavLink>
@@ -221,7 +224,7 @@ function IndexNavbar() {
               </NavItem>
               <NavItem>
                 <NavLink
-                  onClick={e => { e.preventDefault(); postavi(1); }}
+                  onClick={e => { e.preventDefault(); postavi(true); }}
                 >
                   <p>srb</p>
                 </NavLink>

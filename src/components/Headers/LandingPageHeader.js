@@ -7,6 +7,12 @@ import { Button, Container } from "reactstrap";
 
 function LandingPageHeader() {
   let pageHeader = React.createRef();
+  const [lan, setLan] = React.useState(localStorage.getItem("lan"));
+
+  function lang() {
+    setLan(localStorage.getItem("lan"));
+    console.log(lan);
+  }
 
   React.useEffect(() => {
     if (window.innerWidth > 991) {
@@ -23,7 +29,7 @@ function LandingPageHeader() {
   });
   return (
     <>
-      <div className="page-header page-header-small">
+      <div className="page-header page-header-small" onLoad={lang}>
         <div
           className="page-header-image"
           style={{
@@ -33,12 +39,14 @@ function LandingPageHeader() {
         ></div>
         <div className="content-center">
           <Container>
-            <h1 className="title">Welcome to FitBox.</h1>
+            <h1 className="title">
+              Welcome to FitBox.
+            </h1>
             <div>
               <blockquote className="blockqoute">
-                <p> Radno vreme : </p>
-                <p> Pon-Pet: 00-24h </p>
-                <p> Sub-Ned: 8-21h</p>
+                <p> Working hours : </p>
+                <p> Mon-Fri: 00-24h </p>
+                <p> Sat-Sun: 8-21h</p>
               </blockquote>
             </div>
           </Container>
