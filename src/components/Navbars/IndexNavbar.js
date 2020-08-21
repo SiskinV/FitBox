@@ -20,6 +20,23 @@ import {
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+  const [lan, setLan] = React.useState(localStorage.getItem("lan"));
+
+  function postavi(a) {
+    if (localStorage.getItem("lan") == null) {
+      setLan(a);
+      localStorage.setItem("lan", a);
+    } else {
+      setLan(a);
+      localStorage.setItem("lan", a);
+
+    }
+    if (a == true) {
+      window.location.href = "http://localhost:3000/landing-pageSr"
+    }
+    //console.log(lan);
+  }
+
   React.useEffect(() => {
     const updateNavbarColor = () => {
       if (
@@ -88,7 +105,8 @@ function IndexNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons objects_globe"></i>
-                  <p>Pocetna</p>
+                  <p>Landing</p>
+
                 </NavLink>
               </NavItem>
               <UncontrolledDropdown nav>
@@ -100,20 +118,20 @@ function IndexNavbar() {
                   onClick={e => e.preventDefault()}
                 >
                   <i className="now-ui-icons design_bullet-list-67 mr-1"></i>
-                  <p>Usluge</p>
+                  <p>Services</p>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem to="/training-page" tag={Link}>
                     <i className="now-ui-icons sport_user-run mr-1"></i>
-                    Treninzi
+                    Trainings
                   </DropdownItem>
                   <DropdownItem to="/massage-page" tag={Link}>
                     <i className="now-ui-icons loader_refresh mr-1"></i>
-                    Masaze
+                    Masage
                   </DropdownItem>
                   <DropdownItem to="/nutritionist-page" tag={Link}>
                     <i className="now-ui-icons files_paper mr-1"></i>
-                    Nutricionista
+                    Nutritionist
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>
@@ -126,7 +144,7 @@ function IndexNavbar() {
                   onClick={e => e.preventDefault()}
                 >
                   <i className="now-ui-icons ui-1_calendar-60 mr-1"></i>
-                  <p>Zakazivanje Treninga</p>
+                  <p>Schedule training</p>
                 </Button>
                 <UncontrolledTooltip target="#upgrade-to-pro">
                   Cooming soon!
@@ -138,7 +156,7 @@ function IndexNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons users_single-02 mr-1" />
-                  <p>Profil</p>
+                  <p>Profile</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -147,7 +165,7 @@ function IndexNavbar() {
                   tag={Link}
                 >
                   <i className="now-ui-icons business_badge mr-1" />
-                  <p>Uloguj se</p>
+                  <p>Log in</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -157,7 +175,10 @@ function IndexNavbar() {
                   id="twitter-tooltip"
                 >
                   <i className="fab fa-twitter"></i>
-                  <p className="d-lg-none d-xl-none">Twitter</p>
+
+                  <p p className="d-lg-none d-xl-none">Twitter</p>
+
+
                 </NavLink>
                 <UncontrolledTooltip target="#twitter-tooltip">
                   Follow us on Twitter
@@ -189,7 +210,25 @@ function IndexNavbar() {
                   Follow us on Instagram
                 </UncontrolledTooltip>
               </NavItem>
-
+              <NavItem>
+                <NavLink
+                  onClick={e => { e.preventDefault(); }}
+                >
+                  <p>eng</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink>
+                  <p>/</p>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  onClick={e => { e.preventDefault(); postavi(true); }}
+                >
+                  <p>srb</p>
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Container>

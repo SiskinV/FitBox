@@ -33,20 +33,20 @@ const NutritionistHeader = () => {
                 ></div>
                 <div className="content-center">
                     <Container>
-                        <h1 className="title">Schedule your nutritionist with us.</h1>
+                        <h1 className="title">Zakazite svoj pregled kod nasih nutricionista.</h1>
                         <Row>
                             <Col className="ml-auto mr-auto text-center " md="6">
                                 <div>
                                     <blockquote className="blockqoute">
-                                        <h2> Working hours :</h2>
-                                        <h5> Mon-Fri: 00-24h </h5>
-                                        <h5> Sat-Sun: 8-21h</h5>
+                                        <h2> Radno vreme :</h2>
+                                        <h5> Pon-Pet: 00-24h </h5>
+                                        <h5> Sub-Ned: 8-21h</h5>
                                     </blockquote>
                                 </div>
                             </Col>
                             <Col className="ml-auto mr-auto text-center " md="6">
                                 <div>
-                                    <h2> Contact: </h2>
+                                    <h2> Kontakt: </h2>
                                     <h3> +38169321546</h3>
                                     <h3> +38164613524</h3>
 

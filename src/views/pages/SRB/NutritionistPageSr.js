@@ -1,7 +1,7 @@
 import React from 'react';
-import IndexNavbar from 'components/Navbars/IndexNavbar';
+import IndexNavbarSr from 'components/Navbars/IndexNavbarSr';
 import LandingPageHeader from "components/Headers/LandingPageHeader.js";
-import NutritionistHeader from 'components/Headers/NutritionistHeader';
+import NutritionistHeaderSr from 'components/Headers/SRB/NutritionistHeaderSr.js';
 
 import {
     Container,
@@ -24,9 +24,9 @@ const NutrtionistPage = () => {
     });
     return (
         <>
-            <IndexNavbar />
+            <IndexNavbarSr />
             <div className="wrapper">
-                <NutritionistHeader />
+                <NutritionistHeaderSr />
                 <div className="section section-about-us">
                     <Container>
                     <Row>
@@ -36,8 +36,6 @@ const NutrtionistPage = () => {
                                 Ne kazu dzabe da je trening 30% a ishrana 70%.Trening bez zdrave ishrane gotovo da nema efekta.
                                 Trening i ishrana su vezani jedno za drugo i ne mogu jedno bez drugog.Bez obzira da li zelite
                                 da skinete masno tkivo ili da dobijete misice ishrana je veoma bitan faktor.
-
-                                TEKST TEKST TEKST
                             </h5>
                         </Col>
                     </Row>
@@ -122,7 +120,7 @@ const NutrtionistPage = () => {
                             <Col className="ml-auto mr-auto" md="12">
                                 <div className="title text-center">
                                     <Button color="warning">
-                                        <a href="http://localhost:3000/masnutrireserve-page">Zakazi termin </a>
+                                        <a href="http://localhost:3000/masnutrireserve-pageSr">Zakazi termin </a>
                                     </Button>
                                 </div>
                             </Col>

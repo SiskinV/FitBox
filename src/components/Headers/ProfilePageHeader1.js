@@ -99,7 +99,7 @@ function ProfilePageHeader1() {
           <div className="content">
             <div className="social-description">
               <h2>{god}</h2>
-              <p>Godine</p>
+              <p>Years</p>
             </div>
             <div className="social-description">
               <h2>{avg}</h2>
@@ -107,7 +107,7 @@ function ProfilePageHeader1() {
             </div>
             <div className="social-description">
               <h2>100e</h2>
-              <p>Cena</p>
+              <p>Price</p>
             </div>
           </div>
         </Container>

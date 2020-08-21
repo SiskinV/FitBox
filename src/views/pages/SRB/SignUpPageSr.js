@@ -18,7 +18,7 @@ import {
 
 // core components
 import TransparentFooter from "components/Footers/TransparentFooter.js";
-import IndexNavbar from "components/Navbars/IndexNavbar";
+import IndexNavbarSr from "components/Navbars/IndexNavbarSr.js";
 
 const reset = () => {
     document.getElementById('name').value = "";
@@ -80,7 +80,7 @@ const registrujSe = (event) => {
         localStorage.setItem('ulogovan', JSON.stringify(ulogovan));
         localStorage.setItem('ulogovanUser', 1);
 
-        window.location.replace("http://localhost:3000/landing-page");
+        window.location.replace("http://localhost:3000/landing-pageSr");
     }
 
 }
@@ -104,7 +104,7 @@ function SignupPage() {
 
     return (
         <>
-            <IndexNavbar />
+            <IndexNavbarSr />
             <div className="page-header clear-filter" filter-color="blue">
                 <div
                     className="page-header-image"
@@ -135,7 +135,7 @@ function SignupPage() {
                                             </InputGroupAddon>
                                             <Input
                                                 id="name"
-                                                placeholder="Name..."
+                                                placeholder="Ime..."
                                                 type="text"
                                                 onFocus={() => setFirstFocus(true)}
                                                 onBlur={() => setFirstFocus(false)}
@@ -154,7 +154,7 @@ function SignupPage() {
                                             </InputGroupAddon>
                                             <Input
                                                 id="surname"
-                                                placeholder="Surname..."
+                                                placeholder="Prezime..."
                                                 type="text"
                                                 onFocus={() => setLastFocus(true)}
                                                 onBlur={() => setLastFocus(false)}
@@ -211,7 +211,7 @@ function SignupPage() {
                                             </InputGroupAddon>
                                             <Input
                                                 id="password"
-                                                placeholder="Password..."
+                                                placeholder="Sifra..."
                                                 type="password"
                                                 onFocus={() => setLastFocus(true)}
                                                 onBlur={() => setLastFocus(false)}
@@ -227,7 +227,7 @@ function SignupPage() {
                                             onClick={e => registrujSe(e)}
                                             size="lg"
                                         >
-                                            Register
+                                            Registruj se
                                         </Button>
 
                                     </CardFooter>
