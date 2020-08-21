@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+
 // reactstrap components
 import {
     Button,
@@ -20,36 +21,12 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
+import IndexNavbarSr from "components/Navbars/IndexNavbarSr.js";
 import ProfilePageHeader1 from "components/Headers/ProfilePageHeader1.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
-import TrainingPageHeader from "components/Headers/TrainingPageHeader";
-var opis;
-const klik = (event, id) => {
-    event.preventDefault();
-    var logovan;
-    var moze=true;
-    var korisnik=JSON.parse(localStorage.getItem('ulogovan'));
-    var korisnici=JSON.parse(localStorage.getItem('users'));
-    var trng=JSON.parse(localStorage.getItem('sviTreninzi'));
-    for (var i = 0; i < korisnici.length; i++) {
-        if (korisnici[i].username == korisnik.username) {
-           //korisnici[i].opis=(trng[id]);
-           console.log(korisnici[i].opis);
-           for(var j=0;j<korisnici[i].trainings.length;j++)
-           {
-           if(parseInt(korisnici[i].trainings[j].id)==id)moze=false;
-           }
-           if(moze)korisnici[i].trainings.push(trng[id]);
-           localStorage.setItem('users', JSON.stringify(korisnici));
-           console.log(korisnici);
-           break;
-        }
-    }
+import MassagePageHeaderSr from "components/Headers/SRB/MassagePageHeaderSr.js";
 
-}
-const TrainingPage = () => {
-
+function ProfilePage1() {
     const [pills, setPills] = React.useState("2");
     React.useEffect(() => {
         document.body.classList.add("profile-page");
@@ -60,18 +37,17 @@ const TrainingPage = () => {
             document.body.classList.remove("sidebar-collapse");
         };
     });
-
     return (
         <>
-            <IndexNavbar />
+            <IndexNavbarSr />
             <div className="wrapper">
-                <TrainingPageHeader />
+                <MassagePageHeaderSr />
                 <div className="section">
                     <Container>
                         <div className="button-container">
                             <Button className="btn-round" color="info" size="lg">
                                 Follow
-                            </Button>
+              </Button>
                             <Button
                                 className="btn-round btn-icon"
                                 color="default"
@@ -97,13 +73,13 @@ const TrainingPage = () => {
                         </div>
                         <h3 className="title">O nama</h3>
                         <h5 className="description">
-                            Naši treninzi pomažu korisnicima da ostvare željene ciljeve u što kraće vreme.
-                            Ukoliko si nov pri vežbanju i nemaš veliko predznanje o svome telu ili se plašiš povreda,
-                            tu su naši profesionalni treneri koji će te izvesti na pravi i željeni put.
+                            Najmodernije tehnike masiranja koje nasim visegodisnjim strucnjacima nisu nepoznate, koje ce
+                            Vam ublaziti i opraviti telo posle svakog treninga. Pored relaks i sportskih masaza koje su
+                            uobicajene imamo i masaze koje su stigle sa drugih podrucja: Indije,Japana.
                          </h5>
                         <Row>
                             <Col className="ml-auto mr-auto" md="6">
-                                <h4 className="title text-center">Vrste treninga</h4>
+                                <h4 className="title text-center">Vrste masaza</h4>
                                 <div className="nav-align-center">
                                     <Nav
                                         className="nav-pills-info nav-pills-just-icons"
@@ -119,7 +95,7 @@ const TrainingPage = () => {
                                                     setPills("1");
                                                 }}
                                             >
-                                                <i>Pon</i>
+                                                <i>1</i>
                                             </NavLink>
                                         </NavItem>
                                         <NavItem>
@@ -131,7 +107,7 @@ const TrainingPage = () => {
                                                     setPills("2");
                                                 }}
                                             >
-                                                <i>Sre</i>
+                                                <i>2</i>
                                             </NavLink>
                                         </NavItem>
                                         <NavItem>
@@ -143,7 +119,7 @@ const TrainingPage = () => {
                                                     setPills("3");
                                                 }}
                                             >
-                                                <i>Pet</i>
+                                                <i>3</i>
                                             </NavLink>
                                         </NavItem>
                                     </Nav>
@@ -157,23 +133,26 @@ const TrainingPage = () => {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Prenatal Yoga</CardTitle>
+                                                        <CardTitle tag="h4">Relaks masaza</CardTitle>
                                                         <CardText>
-                                                            Prenatal yoga je savršena aktivnost za trudnice jer pruža psihofizičku pripremu za porođaj, opušta i smiruje telo, uči pravilnom držanju i ono što je možda i najlepše upoznaćete gomilu mama koje dele iste brige kao i vi!
-                                                            Program Prenatal yoge je takav da se prilagođava trimestru u kome se trenutno nalazite, tako da ćete uvek vežbati bezbedno i u granicama svog trenutnog stanja i mogućnosti. Program se sastoji od brojnih fizičkih vežbi i asana, sadrži vežbe disanja za trudnice, kao i opuštanje – yoga Nidra!
-                                                            Tokom trudnoće naše telo se stalno menja!
+                                                            Najcesce primenjivana vrsta masaze.Masiraju se povrsinski
+                                                            spojevi misica.Ova vrsta masaze je nezna i opustajuca.
+                                                            Traje 1 sat.
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 0)}>Zakazi trening </Button>
+                                                        <p>Cena: 1200din</p>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">GRIT</CardTitle>
+                                                        <CardTitle tag="h4">Sportska masaza</CardTitle>
                                                         <CardText>
-                                                            Kreiran radi sagorevanja masti i značajnog uvećanja atletskih sposobnosti, ova tridesetominutna tim trening sesija ne koristi nikakvu opremu osim samog tela. Trening vode obučeni treneri, i obezbeđuje izazov i intenzitet koji su vam neophodni da biste sopstveni trening preneli na viši nivo i zaista ostvarili rezultate.
+                                                            Namenjena je osobama koje se aktvno bave sportom jer joj je
+                                                            osnovna funkcija nije opustanje,vec sprecavanje povreda i poveccanje
+                                                            sportskih mogucnosti.Najvise je orijentisana na istezanje misica
+                                                            Traje 1 sat.
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 1)}>Zakazi trening </Button>
+                                                        <p>Cena: 1500din</p>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -181,23 +160,28 @@ const TrainingPage = () => {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Gluteus</CardTitle>
+                                                        <CardTitle tag="h4">Sijacu masaza</CardTitle>
                                                         <CardText>
-                                                            Gluteus je trening na kom se efikasno oblikuju zadnjica i noge. Za samo mesec dana mogu se videti merljivi rezultati promena na oblinama i vašoj zadnjici.
+                                                            Ovo je japanska masaza gde maser pritiska niz akupunkturnih tacaka
+                                                            i svak tacka poboljsava vas protok energije i vraca telo u balans.
+                                                            Njom stimulise protok zivotne energije,Ci. Deluje na stres migrenu bol u ledjima
+                                                            gojaznost.
+                                                            Traje oko 45 minuta
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 2)}>Zakazi trening </Button>
+                                                        <p>Cena: 2000din</p>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">E-SPINNING</CardTitle>
+                                                        <CardTitle tag="h4">Masaza vulkanskim kamenjem</CardTitle>
                                                         <CardText>
-                                                            Spining spada u najpopularnije kardio treninge.
-                                                            Postoji razlog za to, osim što će te se dobro prezonijiti izgbućete
-                                                            preko 500 kalorija.
+                                                            Radi se tako sto se toplo kamenje poredja po telu
+                                                            da bi se ono opustilo i regenerisalo.Masiraju se takodje
+                                                            i ligamenti i misici.Odlicna je za detoksikaciju,
+                                                            Traje oko 90 min.
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 3)}>Zakazi trening </Button>
+                                                        <p>Cena: 3000din</p>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -211,22 +195,26 @@ const TrainingPage = () => {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Yoga</CardTitle>
+                                                        <CardTitle tag="h4">Aromaterapija</CardTitle>
                                                         <CardText>
-                                                            Tradicija vežbanja više hiljada godina, obuhvata fizičke vežbe i vežbe disanja u cilju poboljšanja kompletnog energetskog stanja čoveka. Praktična disciplina koja povezuje um, telo i duh na potpuno prirodan način. Vežbe deluju na najvažnije centre u telu podižući fizičko i mentalno zdravlje na viši nivo. Razvija se fizička snaga, povećava izdržljivost i fleksibilnost, ublažava umor i stres, a sa druge strane diže nivo energije u organizmu pa samim tim poboljšava celokupno zdravsveno stanje. Nema ograničenja, preporučuje se svima!
+                                                            Ovo je masazna terapija u kojoj se koriste aromaticna ulja koja biraju se
+                                                            biraju prema problemu.To su obicno opustanje i anti-stres.
+                                                            Traje oko 60 min.
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 4)}>Zakazi trening </Button>
+                                                        <p>Cena: 1000din</p>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Pilates</CardTitle>
+                                                        <CardTitle tag="h4">Anticelulit masaza</CardTitle>
                                                         <CardText>
-                                                            Pilates je zamišljen da bude kompletna disciplina fizičkog vežbanja.
-                                                            Mada, možda će se početnicima činiti da on ne zadovoljava u dovoljnoj meri kardio-vaskularni trening. Ipak, jednom kada se u njemu usavršite, Pilates trening ojačaće i preoblikovati (izravnati) celo vaše telo. Pilates naširoko izbegava jake udarce, veliku izlaznu snagu i teška mišićna i skeletna opterećenja. Naglasak nije jednostavno na sticanju mišićne mase. Njegov fokus je jedinstven i stavlja naglasak na izduživanje i poravnjanje, i on može u tome veoma uspešno da uvežba mišiće predupređujući time razne povrede.
+                                                            Ovo je najefikasniji nacin uklanjanja celulita.Njom se poboljsava cirkulacija
+                                                            izbacuju toksini i ojacava tkivo.Ovo je intenzivna masaza i zato je potrebno
+                                                            da prve masaze budu blaze da klijent ne bi dobio modrice.
+                                                            Traje oko 30-40 min.
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 5)}>Zakazi trening </Button>
+                                                        <p>Cena: 2500din</p>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -234,24 +222,29 @@ const TrainingPage = () => {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Zumba</CardTitle>
+                                                        <CardTitle tag="h4">Ayurveda masaza</CardTitle>
                                                         <CardText>
-                                                            Osnovana je 2001. godine. Zumba Fitnes je svetski brend koji spaja fitnes, zabavu i kulturu u uzbudljivi “dance” koncept! Zumba® treninzi u Beogradu u Ethnogymu na Banjici  su kao fitnes žurka koja sadrži latino muziku, latino plesove i koreografiju koja se lako prati. Dok se zabavljate na treningu ovaj aerobni program će vam pokrenuti celo telo, dobro će vas oznojiti i uneti osvežavajuću energiju dalekih južnih mora. Zumba utapa jednostavne plesne poktere u hipnotičke ritmove salse, sambe, tanga…
+                                                            Zasnovana je na indijskoj medicini i ima jako povoljno dejstvo na prevenciju
+                                                            opadanja kose,nesanicu,migrenu,ispravljanje bora i prociscenje koze.
+                                                            Imaju masaza glave i masaza tela.
+                                                            Masaza glave traje 10-15 min.
+                                                            Masaza tela traja 90 min.
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 6)}>Zakazi trening </Button>
+                                                        <p>Cena: 2800din</p>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">E-CORE</CardTitle>
+                                                        <CardTitle tag="h4">Refleksologija</CardTitle>
                                                         <CardText>
-                                                            E-Core je nov koncept grupnog fitness treninga.
-                                                            Ovaj čas traje 30 minuta i fokusira se na abdomen, oblikus i leđne mišiće.
-                                                            E-Core je ekspres program baziran na miksu jednostavnih i sigurnih vežbi.
-                                                            Sa E- Core-om uživaćete u izazovu i uspehu vežbi koje će vas dovesti do željenih trbušnjaka
+                                                            Ovo je masaža koja se sprovodi na stoplima, pri čemu se pritiskaju određene tačke kojima
+                                                            se stimuliše rad određenih unutrašnjih organa. Vrlo je opuštajuća i povoljno deluje
+                                                            na stres, poremećaje u varenju,
+                                                            hormonsku ravnotežu, nesanicu, bolove u leđima, PMS, lošu cirkulaciju..
+                                                            Traje od 30 do 50 minuta
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 7)}>Zakazi trening </Button>
+                                                        <p>Cena: 1000din</p>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -265,11 +258,16 @@ const TrainingPage = () => {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Les Mills Body Step</CardTitle>
+                                                        <CardTitle tag="h4">Limfna drenaza</CardTitle>
                                                         <CardText>
-                                                            BODYSTEP™ je energični trening sa steperom koji čini da se osećate slobodnim tokom treninga.  Ako saberemo podesive stepere, jednostavne korake (preko ili oko stepera) sa sjajnom muzikom koju svi pevaju i dostpunim instruktorom, koga ćete lako pratiti, imaćete sjajan trening. Kardio blokovi će probuditi vaš sistem za sagorevanje kalorija i ubaciti ga u sledeću brzinu, sve to praćeno kondicionim pesmama koje će oblikovati vaše telo.
+                                                            Ova masaza je namenjena povećanju cirkulacije limfe, venske cirkulacije,
+                                                            detokcikaciji i izbacivanju viška tečnosti.
+                                                            Kao takva pogodije osobama sa proširenim venama i kapilarima,
+                                                            otklanja simptome “teških” nogu , dobra je u prevenciji i otklanjanju celulita
+                                                            i jacanju imunog sistema.
+                                                            Traje 35 min.
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 8)}>Zakazi trening </Button>
+                                                        <p>Cena: 2200din</p>
                                                     </CardBody>
                                                 </Card>
 
@@ -278,11 +276,14 @@ const TrainingPage = () => {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Les Mills Body Combat</CardTitle>
+                                                        <CardTitle tag="h4">Kraljevska masaza</CardTitle>
                                                         <CardText>
-                                                            BODY COMBAT™ je grupni fitnes kadrio trening u kome ste svaki put vi pobednici. Jedini trening na kome možete totalno da oslobodite sve negativno iz sebe i da se nakon toga osećate sjajno. Ovaj energični program je inspirisan mešavinom borilačkih veština i koriste se pokreti iz raznih disciplina kao što su: karate, boks, tai chi i muay thai. Iskustvo koje vežbači dobijaju na treningu slušajući sjajnu motivacionu muziku i prateći savršene instruktore čini to da vežbači požele da nikad ne izađu iz ringa (fitnes sale). Baš to je ono što BODYCOMBAT™ čini svetski najpopularnijim   borilačkim fitnes treningom. Tokom ovog krajnje ratničkog treninga vi ćete udarati, napadati, šutirati i izvoditi katu i tim putem sagoriti mnogo kalorija. Kao i svi LES MILLS™ programi, na svaka tri meseca BODYCOMBAT™ dobija novu muziku i koreografiju koju dizajniraju najbolji Master treneri i MMA experti.
+                                                            Ovo je masa tzv. 4 ruke.Odnosi se na istovremeno masiranje od 2 terapeuta
+                                                            pri cemu jedan od njih kreira pokrete a drugi prati.Tako se postize balans protoka tecnosti
+                                                            u organizmu i istovremeno opustanje obe strane tela. Objedinjuje ostale masaze.
+                                                            Traje 60 min.
                                                         </CardText>
-                                                        <Button color="warning" onClick={e => klik(e, 9)}>Zakazi trening </Button>
+                                                        <p>Cena: 3200din</p>
                                                     </CardBody>
                                                 </Card>
 
@@ -292,6 +293,15 @@ const TrainingPage = () => {
                                 </TabPane>
                             </TabContent>
                         </Row>
+                        <Row>
+                            <Col className="ml-auto mr-auto" md="12">
+                                <div className="title text-center">
+                                    <Button color="warning">
+                                        <a href="http://localhost:3000/masnutrireserve-pageSr">Zakazi masazu </a>
+                                    </Button>
+                                </div>
+                            </Col>
+                        </Row>
                     </Container>
                 </div>
                 <DefaultFooter />
@@ -300,4 +310,4 @@ const TrainingPage = () => {
     );
 }
 
-export default TrainingPage;
+export default ProfilePage1;

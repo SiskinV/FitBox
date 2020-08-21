@@ -33,17 +33,17 @@ import DefaultFooter from "components/Footers/DefaultFooter.js";
 
 
 const columns = [
-  { id: 'name', label: 'Ime', minWidth: 170 },
-  { id: 'date', label: 'Datum', minWidth: 100 },
+  { id: 'name', label: 'Name', minWidth: 170 },
+  { id: 'date', label: 'Date', minWidth: 100 },
   {
     id: 'time',
-    label: 'Vreme',
+    label: 'Time',
     minWidth: 250,
     align: 'right',
   },
   {
     id: 'done',
-    label: 'Odrzan',
+    label: 'Done',
     minWidth: 170,
     align: 'right',
     format: (value) => value.toLocaleString('en-US'),

@@ -20,10 +20,10 @@ import {
 
 // core components
 import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import IndexNavbar from "components/Navbars/IndexNavbar.js";
-import ProfilePageHeader1 from "components/Headers/ProfilePageHeader1.js";
+import IndexNavbarSr from "components/Navbars/IndexNavbarSr.js";
+import ProfilePageHeader1Sr from "components/Headers/ProfilePageHeader1.js";
 import DefaultFooter from "components/Footers/DefaultFooter.js";
-import TrainingPageHeader from "components/Headers/TrainingPageHeader";
+import TrainingPageHeaderSr from "components/Headers/SRB/TrainingPageHeaderSr";
 let cntId = 0;
 let plus = [4, 5, 7, 0, 2, 1, 4, 5, 7, 6];
 let minus = [2, 1, 7, 3, 2, 5, 1, 2, 1, 3];
@@ -37,27 +37,9 @@ const mminus = (e, id) => {
     minus[id] += 1;
     console.log(minus);
 }
-const ocenjivanje=(e,id,zadato)=>{
-var moze=false;
-    var korisnik=JSON.parse(localStorage.getItem('ulogovan'));
-    var korisnici=JSON.parse(localStorage.getItem('users'));
-    var trng=JSON.parse(localStorage.getItem('sviTreninzi'));
-    for (var i = 0; i < korisnici.length; i++) {
-        if (korisnici[i].username == korisnik.username) {
-           //korisnici[i].opis=(trng[id]);
-           for(var j=0;j<korisnici[i].trainings.length;j++)// MOZDA TREVA J OD 0
-           {
-            var pp=korisnici[i].trainings[j].id;
-            console.log(korisnici[i].trainings);
-           if(parseInt(korisnici[i].trainings[j].id)==id)moze=true;
-           console.log(moze,korisnici[i].trainings[j].id);
-           }
-        }
-      }
-if(moze){
-ocena[id][0]=(ocena[id][0]*ocena[id][1]+zadato)/(ocena[id][1]+1);
-ocena[id][1]+=1;
-}
+const ocenjivanje = (e, id, zadato) => {
+    ocena[id][0] = (ocena[id][0] * ocena[id][1] + zadato) / (ocena[id][1] + 1);
+    ocena[id][1] += 1;
 }
 const TrainingPage = () => {
 
@@ -85,14 +67,14 @@ const TrainingPage = () => {
 
     return (
         <>
-            <IndexNavbar />
+            <IndexNavbarSr />
             <div className="wrapper">
-                <TrainingPageHeader />
+                <TrainingPageHeaderSr />
                 <div className="section">
                     <Container>
                         <div className="button-container">
                             <Button className="btn-round" color="info" size="lg">
-                                Follow
+                                Pratite
                             </Button>
                             <Button
                                 className="btn-round btn-icon"
@@ -103,7 +85,7 @@ const TrainingPage = () => {
                                 <i className="fab fa-twitter"></i>
                             </Button>
                             <UncontrolledTooltip delay={0} target="tooltip515203352">
-                                Follow me on Twitter
+                                Pratite me na Tviteru
               </UncontrolledTooltip>
                             <Button
                                 className="btn-round btn-icon"
@@ -114,7 +96,7 @@ const TrainingPage = () => {
                                 <i className="fab fa-instagram"></i>
                             </Button>
                             <UncontrolledTooltip delay={0} target="tooltip340339231">
-                                Follow me on Instagram
+                                Pratite me na Instagramu
               </UncontrolledTooltip>
                         </div>
                         <h3 className="title">O nama</h3>
@@ -122,8 +104,6 @@ const TrainingPage = () => {
                             Naši treninzi pomažu korisnicima da ostvare željene ciljeve u što kraće vreme.
                             Ukoliko si nov pri vežbanju i nemaš veliko predznanje o svome telu ili se plašiš povreda,
                             tu su naši profesionalni treneri koji će te izvesti na pravi i željeni put.
-
-                            TEKST TEKST
                          </h5>
                         <Row>
                             <Col className="ml-auto mr-auto" md="6">
@@ -383,7 +363,7 @@ const TrainingPage = () => {
                             <Col className="ml-auto mr-auto" md="12">
                                 <div className="title text-center">
                                     <Button color="warning">
-                                        <a href="http://localhost:3000/zakazi-page">Zakazi trening </a>
+                                        <a href="http://localhost:3000/zakazi-pageSr">Zakazi trening </a>
                                         {/* href="http://localhost:3000/masnutrireserve-page" */}
                                     </Button>
                                 </div>

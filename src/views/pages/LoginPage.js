@@ -178,7 +178,7 @@ const LoginPage = () => {
                       size="lg"
 
                     >
-                      Uloguj se
+                      Log in
 
 
                     </Button>
@@ -187,7 +187,7 @@ const LoginPage = () => {
                         <a
                           href="http://localhost:3000/signup-page"
                         >
-                          Registruj se
+                          Register
                         </a>
                       </h6>
                     </div>
@@ -201,9 +201,6 @@ const LoginPage = () => {
                           Help?
                         </a>
                       </h6>
-                      <Button onClick={() => { alert(document.getElementById("username").value) }}>
-                        klikni me
-                      </Button>
                     </div>
                   </CardFooter>
                 </Form>
