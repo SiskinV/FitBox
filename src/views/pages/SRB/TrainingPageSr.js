@@ -37,10 +37,28 @@ const mminus = (e, id) => {
     minus[id] += 1;
     console.log(minus);
 }
-const ocenjivanje = (e, id, zadato) => {
-    ocena[id][0] = (ocena[id][0] * ocena[id][1] + zadato) / (ocena[id][1] + 1);
-    ocena[id][1] += 1;
-}
+const ocenjivanje=(e,id,zadato)=>{
+    var moze=false;
+        var korisnik=JSON.parse(localStorage.getItem('ulogovan'));
+        var korisnici=JSON.parse(localStorage.getItem('users'));
+        var trng=JSON.parse(localStorage.getItem('sviTreninzi'));
+        for (var i = 0; i < korisnici.length; i++) {
+            if (korisnici[i].username == korisnik.username) {
+               //korisnici[i].opis=(trng[id]);
+               for(var j=0;j<korisnici[i].trainings.length;j++)// MOZDA TREVA J OD 0
+               {
+                var pp=korisnici[i].trainings[j].id;
+                console.log(korisnici[i].trainings);
+               if(parseInt(korisnici[i].trainings[j].id)==id)moze=true;
+               console.log(moze,korisnici[i].trainings[j].id);
+               }
+            }
+          }
+    if(moze){
+    ocena[id][0]=(ocena[id][0]*ocena[id][1]+zadato)/(ocena[id][1]+1);
+    ocena[id][1]+=1;
+    }
+    }
 const TrainingPage = () => {
 
     const [buttonText1, setButtonText1] = React.useState(ocena[0][0]);

@@ -71,11 +71,11 @@ function ProfilePage1() {
                                 Follow me on Instagram
               </UncontrolledTooltip>
                         </div>
-                        <h3 className="title">O nama</h3>
+                        <h3 className="title">About us</h3>
                         <h5 className="description">
-                            Najmodernije tehnike masiranja koje nasim visegodisnjim strucnjacima nisu nepoznate, koje ce
-                            Vam ublaziti i opraviti telo posle svakog treninga. Pored relaks i sportskih masaza koje su
-                            uobicajene imamo i masaze koje su stigle sa drugih podrucja: Indije,Japana.
+                        The most modern massage techniques that are not unknown to our long-term experts, which will
+                             You soften and repair your body after each workout. In addition to relaxation and sports massages that are
+                             we also have massages that have arrived from other areas: India, Japan.
                          </h5>
                         <Row>
                             <Col className="ml-auto mr-auto" md="6">
@@ -133,26 +133,26 @@ function ProfilePage1() {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Relaks masaza</CardTitle>
+                                                        <CardTitle tag="h4">Relax massage</CardTitle>
                                                         <CardText>
-                                                            Najcesce primenjivana vrsta masaze.Masiraju se povrsinski
-                                                            spojevi misica.Ova vrsta masaze je nezna i opustajuca.
-                                                            Traje 1 sat.
+                                                        The most commonly used type of massage. They are massaged superficially
+                                                             muscle joints.This type of massage is gentle and relaxing.
+                                                             It lasts 1 hour.
                                                         </CardText>
-                                                        <p>Cena: 1200din</p>
+                                                        <p>Price: 1200din</p>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Sportska masaza</CardTitle>
+                                                        <CardTitle tag="h4">Sports massage</CardTitle>
                                                         <CardText>
-                                                            Namenjena je osobama koje se aktvno bave sportom jer joj je
-                                                            osnovna funkcija nije opustanje,vec sprecavanje povreda i poveccanje
-                                                            sportskih mogucnosti.Najvise je orijentisana na istezanje misica
-                                                            Traje 1 sat.
+                                                        It is intended for people who are actively involved in sports because it is for her
+                                                             the basic function is not relaxation, but injury prevention and augmentation
+                                                             sports opportunities.It is mostly focused on stretching the muscles
+                                                             It lasts 1 hour.
                                                         </CardText>
-                                                        <p>Cena: 1500din</p>
+                                                        <p>Price: 1500din</p>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -160,28 +160,28 @@ function ProfilePage1() {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Sijacu masaza</CardTitle>
+                                                        <CardTitle tag="h4">Siacu massage</CardTitle>
                                                         <CardText>
-                                                            Ovo je japanska masaza gde maser pritiska niz akupunkturnih tacaka
-                                                            i svak tacka poboljsava vas protok energije i vraca telo u balans.
-                                                            Njom stimulise protok zivotne energije,Ci. Deluje na stres migrenu bol u ledjima
-                                                            gojaznost.
-                                                            Traje oko 45 minuta
+                                                        This is a Japanese massage where the masseur presses through acupuncture points
+                                                             and each point improves your energy flow and restores your body to balance.
+                                                             It stimulates the flow of life energy, Ci. It affects the stress of migraine back pain
+                                                             obesity.
+                                                             It takes about 45 minutes
                                                         </CardText>
-                                                        <p>Cena: 2000din</p>
+                                                        <p>Price: 2000din</p>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Masaza vulkanskim kamenjem</CardTitle>
+                                                        <CardTitle tag="h4">Massage with volcanic stones</CardTitle>
                                                         <CardText>
-                                                            Radi se tako sto se toplo kamenje poredja po telu
-                                                            da bi se ono opustilo i regenerisalo.Masiraju se takodje
-                                                            i ligamenti i misici.Odlicna je za detoksikaciju,
-                                                            Traje oko 90 min.
+                                                        It is done by arranging warm stones on the body
+                                                             to relax and regenerate. They are also massaged
+                                                             and ligaments and muscles. Great for detoxification,
+                                                             It takes about 90 minutes.
                                                         </CardText>
-                                                        <p>Cena: 3000din</p>
+                                                        <p>Price: 3000din</p>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -195,26 +195,26 @@ function ProfilePage1() {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Aromaterapija</CardTitle>
+                                                        <CardTitle tag="h4">Aromatherapy</CardTitle>
                                                         <CardText>
-                                                            Ovo je masazna terapija u kojoj se koriste aromaticna ulja koja biraju se
-                                                            biraju prema problemu.To su obicno opustanje i anti-stres.
-                                                            Traje oko 60 min.
+                                                        This is a massage therapy that uses aromatic oils of your choice
+                                                             choose according to the problem.These are usually relaxation and anti-stress.
+                                                             It takes about 60 minutes.
                                                         </CardText>
-                                                        <p>Cena: 1000din</p>
+                                                        <p>Price: 1000din</p>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Anticelulit masaza</CardTitle>
+                                                        <CardTitle tag="h4">Anti-cellulite massage</CardTitle>
                                                         <CardText>
-                                                            Ovo je najefikasniji nacin uklanjanja celulita.Njom se poboljsava cirkulacija
-                                                            izbacuju toksini i ojacava tkivo.Ovo je intenzivna masaza i zato je potrebno
-                                                            da prve masaze budu blaze da klijent ne bi dobio modrice.
-                                                            Traje oko 30-40 min.
+                                                        This is the most effective way to remove cellulite. It improves circulation
+                                                             they expel toxins and strengthen the tissue. This is an intensive massage and that is why it is necessary
+                                                             that the first massages be milder so that the client does not get bruises.
+                                                             It takes about 30-40 minutes.
                                                         </CardText>
-                                                        <p>Cena: 2500din</p>
+                                                        <p>Price: 2500din</p>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -222,29 +222,29 @@ function ProfilePage1() {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Ayurveda masaza</CardTitle>
+                                                        <CardTitle tag="h4">Ayurveda massage</CardTitle>
                                                         <CardText>
-                                                            Zasnovana je na indijskoj medicini i ima jako povoljno dejstvo na prevenciju
-                                                            opadanja kose,nesanicu,migrenu,ispravljanje bora i prociscenje koze.
-                                                            Imaju masaza glave i masaza tela.
-                                                            Masaza glave traje 10-15 min.
-                                                            Masaza tela traja 90 min.
+                                                        It is based on Indian medicine and has a very beneficial effect on prevention
+                                                             hair loss, insomnia, migraine, wrinkle correction and skin cleansing.
+                                                             They have a head massage and a body massage.
+                                                             Head massage lasts 10-15 min.
+                                                             Body massage lasts 90 min.
                                                         </CardText>
-                                                        <p>Cena: 2800din</p>
+                                                        <p>Price: 2800din</p>
                                                     </CardBody>
                                                 </Card>
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Refleksologija</CardTitle>
+                                                        <CardTitle tag="h4">Reflexology.</CardTitle>
                                                         <CardText>
-                                                            Ovo je masaža koja se sprovodi na stoplima, pri čemu se pritiskaju određene tačke kojima
-                                                            se stimuliše rad određenih unutrašnjih organa. Vrlo je opuštajuća i povoljno deluje
-                                                            na stres, poremećaje u varenju,
-                                                            hormonsku ravnotežu, nesanicu, bolove u leđima, PMS, lošu cirkulaciju..
-                                                            Traje od 30 do 50 minuta
+                                                        This is a massage that is performed on the feet, while pressing certain points with which
+                                                             stimulates the work of certain internal organs. It is very relaxing and has a beneficial effect
+                                                             stress, indigestion,
+                                                             hormonal balance, insomnia, back pain, PMS, poor circulation ..
+                                                             It lasts from 30 to 50 minutes
                                                         </CardText>
-                                                        <p>Cena: 1000din</p>
+                                                        <p>Price: 1000din</p>
                                                     </CardBody>
                                                 </Card>
                                             </Col>
@@ -258,16 +258,16 @@ function ProfilePage1() {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Limfna drenaza</CardTitle>
+                                                        <CardTitle tag="h4">Lymphatic drainage</CardTitle>
                                                         <CardText>
-                                                            Ova masaza je namenjena povećanju cirkulacije limfe, venske cirkulacije,
-                                                            detokcikaciji i izbacivanju viška tečnosti.
-                                                            Kao takva pogodije osobama sa proširenim venama i kapilarima,
-                                                            otklanja simptome “teških” nogu , dobra je u prevenciji i otklanjanju celulita
-                                                            i jacanju imunog sistema.
-                                                            Traje 35 min.
+                                                        This massage is intended to increase lymph circulation, venous circulation,
+                                                             detoxification and expulsion of excess fluid.
+                                                             As such, it is suitable for people with varicose veins and capillaries,
+                                                             eliminates the symptoms of "heavy" legs, is good in preventing and eliminating cellulite
+                                                             and strengthening the immune system.
+                                                             It takes 35 minutes.
                                                         </CardText>
-                                                        <p>Cena: 2200din</p>
+                                                        <p>Price: 2200din</p>
                                                     </CardBody>
                                                 </Card>
 
@@ -276,14 +276,14 @@ function ProfilePage1() {
                                                 <Card style={{ width: "100%" }}>
                                                     <CardImg alt="..." data-src="holder.js/100px180/?text=Image cap" top></CardImg>
                                                     <CardBody>
-                                                        <CardTitle tag="h4">Kraljevska masaza</CardTitle>
+                                                        <CardTitle tag="h4">Royal massage</CardTitle>
                                                         <CardText>
-                                                            Ovo je masa tzv. 4 ruke.Odnosi se na istovremeno masiranje od 2 terapeuta
-                                                            pri cemu jedan od njih kreira pokrete a drugi prati.Tako se postize balans protoka tecnosti
-                                                            u organizmu i istovremeno opustanje obe strane tela. Objedinjuje ostale masaze.
-                                                            Traje 60 min.
+                                                        This is the mass of the so-called 4 hands. Refers to the simultaneous massage of 2 therapists
+                                                             whereby one of them creates movements and the other follows. Thus a balance of fluid flow is achieved
+                                                             in the body and the simultaneous relaxation of both sides of the body. Combines other massages.
+                                                             It takes 60 minutes.
                                                         </CardText>
-                                                        <p>Cena: 3200din</p>
+                                                        <p>Price: 3200din</p>
                                                     </CardBody>
                                                 </Card>
 
@@ -297,7 +297,7 @@ function ProfilePage1() {
                             <Col className="ml-auto mr-auto" md="12">
                                 <div className="title text-center">
                                     <Button color="warning">
-                                        <a href="http://localhost:3000/masnutrireserve-page">Zakazi masazu </a>
+                                        <a href="http://localhost:3000/masnutrireserve-page">Book a massage </a>
                                     </Button>
                                 </div>
                             </Col>

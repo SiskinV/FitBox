@@ -16,10 +16,25 @@ import {
   Container,
   UncontrolledTooltip
 } from "reactstrap";
-
+var jezik=true;
+function prevod(){
+  jezik=JSON.parse(localStorage.getItem('Jezik'));
+  window.location.reload(false);
+  return jezik;
+ 
+}
+function promeniJezik(e){
+  e.preventDefault();
+  console.log(jezik);
+  jezik=!jezik;
+  console.log(jezik);
+  localStorage.setItem('Jezik', jezik);
+  
+}
 function IndexNavbar() {
   const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = React.useState(false);
+
   const [lan, setLan] = React.useState(localStorage.getItem("lan"));
 
   function postavi(a) {

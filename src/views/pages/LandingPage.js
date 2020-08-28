@@ -33,55 +33,67 @@ function LandingPage() {
     name: 'Parental Yoga',
     comments: [] ,
     date: 'Ponedeljak',
+    id:'0',
     vreme: '14-16',
   },{
     name: 'Grit',
     comments: [] ,
     date: 'Ponedeljak',
+    id:'1',
     vreme: '16-18',
   },{
     name: 'Gluteus',
     comments: [] ,
     date: 'Ponedeljak',
+    id:'2',
     vreme: '18-20',
   },{
     name: 'E-spinning',
     comments: [] ,
     date: 'Ponedeljak',
+    id:'3',
     vreme: '20-22',
   },{
     name: 'Yoga',
     comments: [] ,
     date: 'Sreda',
+    id:'4',
     vreme: '14-16',
   },{
     name: 'Pilates',
     comments: [] ,
     date: 'Sreda',
+    id:'5',
     vreme: '16-18',
   },{
     name: 'Zumba',
     comments: [] ,
     date: 'Sreda',
+    id:'6',
     vreme: '18-20',
   },{
     name: 'E-Core',
     comments: [] ,
     date: 'Sreda',
+    id:'7',
     vreme: '20-22',
   },{
     name: 'Les Mills Body Step',
     comments: [] ,
     date: 'Petak',
+    id:'8',
     vreme: '14-16',
   },{
     name: 'Les Mills Body Combat',
     comments: [] ,
     date: 'Petak',
+    id:'9',
     vreme: '16-18',
   }
 ];
 localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
+var jezik=true;
+localStorage.setItem('Jezik',JSON.stringify(jezik));
   return (
     <>
       <IndexNavbar />
@@ -91,11 +103,11 @@ localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
           <Container>
             <Row>
               <Col className="ml-auto mr-auto text-center" md="8">
-                <h2 className="title">Ko smo mi?</h2>
+                <h2 className="title">Who are we?</h2>
                 <h5 className="description">
-                  Mi smo nova najmodernija teretana u gradu.Nalazimo se na lekinom brdu.
-                  Novi programi po ugledu na najbolje teretane sveta zajedno sa nutricionistima
-                  i prostorom za masaze predstvaljaju savrsen spoj za sve sportiste.
+                We are the new most modern gym in the city. We are located on Leka's hill.
+                   New programs based on the reputation of the best gyms in the world together with nutritionists
+                   and the massage space is the perfect combination for all athletes.
                 </h5>
               </Col>
             </Row>
@@ -136,35 +148,35 @@ localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
                     }}
                   ></div>
                   <h3>
-                    Sta nas cini tako posebnim?
+                    What makes us special?
                   </h3>
                   <p>
-                    Trening sa Personalnim trenerom u FitBoxu-u se ne može uporediti ni sa jednim vašim
-                    treningom koji ste sami odradili. Dobijate svog partnera za trening čiji je jedini zadatak
-                    da vas motiviše i da postignete rezultate koje želite.
-                    Bez obzira na to da li želite da povećete mišićnu masu,
-                    da postanete zvezda na podijumu za igru, da za vama uzdišu
-                    na plaži, da poboljšate zamah u golfu ili da postignete bolje
-                    vreme u sledećem maratonu, naši Personalni treneri vam mogu pomoći u
-                    tome . Takođe, možete dobiti pomoć sa rehabilitacijom od povreda ili sprečavanje
-                    problema.
+                  Training with a Personal Trainer in FitBox cannot be compared to any of yours
+                     training that you have done yourself. You get your training partner whose only task is
+                     to motivate you and achieve the results you want.
+                     Whether you want to gain muscle mass,
+                     to become a star on the game podium, to sigh for you
+                     on the beach, to improve your golf swing or to achieve better
+                     time in the next marathon, our Personal Trainers can help you
+                     tome. You can also get help with injury rehabilitation or prevention
+                     problems.
 
-                    Pitate se kako? Lako!
+                     Wondering how? Easy!
                   </p>
                   <p>
-                    Ukoliko ne znate kako da počnete, Personalni trener je tu da vas motiviše ali i da napravi plan:
-                    – Prikupiće informacije vašem o zdravstvenom statusu
-                    – Proceniće vašu fizičku formu
-                    – Biće uz vas sve vreme kako bi sigurno i bez rizika postigli rezultat koji želite
+                  If you do not know how to start, the Personal Trainer is here to motivate you but also to make a plan:
+                     - It will collect information about your health status
+                     - They will assess your physical shape
+                     - They will be with you all the time in order to achieve the result you want safely and without risk
                   </p>
                   <p>
-                  Uz nase nutricioniste dobicete program ishrane koji ce vam 
-                  pomoci da dodjete do zeljenih rezultata jos brze!
+                  With our nutritionists, you will receive a nutrition program that will help you
+                   help you get the results you want even faster!
                   
                   </p>
                   <p>
-                    Oporavak posle napornih treninga?
-                    Nikad laksi uz nase masaze.
+                  Recovery after hard training?
+                     Never lighter with our massages.
                   </p>
 
                 </Col>
@@ -191,8 +203,8 @@ localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
                     </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
-                      Sve je do terninga, niko ne ustane ujutru i istrci maraton{" "}
-                      . Snaga volje je kao misic, sto ga vise treniras to postaje jaci.
+                    It's all about training, no one gets up in the morning and runs a marathon{" "}
+                    . Willpower is like a muscle, the more you train it the stronger it becomes.
                     </p>
                     <Button
                       className="btn-icon btn-round"
@@ -234,7 +246,7 @@ localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
                       </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
-                      Jedini los trening je onaj koji nisi uradio{" "}.
+                    The only bad workout is the one you didn’t do{" "}.
                     </p>
                     <Button
                       className="btn-icon btn-round"
@@ -268,9 +280,9 @@ localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
                     </h4>
                     <p className="category text-info">Trener</p>
                     <p className="description">
-                      Treniranje ti ne menja samo telo. Treniranje ti menja i um i
-                      stav i raspolozenje.{" "}
-                      Najlepsi pogled dolazi nakon najtezeg penjanja.
+                    Training doesn't just change your body. Coaching changes your mind
+                       attitude and mood.{" "}
+                       The most beautiful view comes after the hardest climbing.
                      
                     </p>
                     <Button
@@ -305,8 +317,8 @@ localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
         </div>
         <div className="section section-contact-us text-center">
           <Container>
-            <h2 className="title">Zelite da dobijate novosti?</h2>
-            <p className="description">Kontaktirajte nas.</p>
+            <h2 className="title">Want to get news?</h2>
+            <p className="description">Contact us.</p>
             <Row>
               <Col className="text-center ml-auto mr-auto" lg="6" md="8">
                 <InputGroup
@@ -361,7 +373,7 @@ localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
                     onClick={e => e.preventDefault()}
                     size="lg"
                   >
-                    Posalji poruku
+                    send a message
                   </Button>
                 </div>
               </Col>
