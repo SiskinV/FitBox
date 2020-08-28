@@ -128,24 +128,24 @@ function ProfilePage2() {
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg1.jpg")}
+                                                    src={require("assets/img/treninzi/bodystep1.jpg")}
                                                 ></img>
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg3.jpg")}
+                                                    src={require("assets/img/treninzi/bodystep2.jpg")}
                                                 ></img>
                                             </Col>
                                             <Col md="6">
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg8.jpg")}
+                                                    src={require("assets/img/treninzi/zumba1.jpg")}
                                                 ></img>
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg7.jpg")}
+                                                    src={require("assets/img/treninzi/ecore2.jpg")}
                                                 ></img>
                                             </Col>
                                         </Row>
@@ -158,24 +158,24 @@ function ProfilePage2() {
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg6.jpg")}
+                                                    src={require("assets/img/treninzi/espinning1.jpg")}
                                                 ></img>
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg11.jpg")}
+                                                    src={require("assets/img/treninzi/espinning2.jpg")}
                                                 ></img>
                                             </Col>
                                             <Col md="6">
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg7.jpg")}
+                                                    src={require("assets/img/treninzi/grit1.jpg")}
                                                 ></img>
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg8.jpg")}
+                                                    src={require("assets/img/treninzi/grit2.jpg")}
                                                 ></img>
                                             </Col>
                                         </Row>
@@ -188,24 +188,24 @@ function ProfilePage2() {
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg3.jpg")}
+                                                    src={require("assets/img/treninzi/yoga1.jpg")}
                                                 ></img>
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg8.jpg")}
+                                                    src={require("assets/img/treninzi/yoga2.jpg")}
                                                 ></img>
                                             </Col>
                                             <Col md="6">
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg7.jpg")}
+                                                    src={require("assets/img/treninzi/pilates1.jpg")}
                                                 ></img>
                                                 <img
                                                     alt="..."
                                                     className="img-raised"
-                                                    src={require("assets/img/bg6.jpg")}
+                                                    src={require("assets/img/treninzi/pilates2.jpg")}
                                                 ></img>
                                             </Col>
                                         </Row>

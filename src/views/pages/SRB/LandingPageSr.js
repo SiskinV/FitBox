@@ -93,7 +93,7 @@ localStorage.setItem('sviTreninzi',JSON.stringify(svi_treninzi));
               <Col className="ml-auto mr-auto text-center" md="8">
                 <h2 className="title">Ko smo mi?</h2>
                 <h5 className="description">
-                aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                
                   Mi smo nova najmodernija teretana u gradu.Nalazimo se na lekinom brdu.
                   Novi programi po ugledu na najbolje teretane sveta zajedno sa nutricionistima
                   i prostorom za masaze predstvaljaju savrsen spoj za sve sportiste.
